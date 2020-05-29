@@ -21,6 +21,19 @@ app.use(methodOverride("_method"));
 
 app.use(express.static(__dirname+"/public"));
 
+/* Routes */
+
+// root routes
+app.get("/", (req,res) => {
+    res.send("index");
+});
+
+// city routes
+app.use("/cities", controllers.city);
+
+// trail routes
+app.use("/trails", controllers.trail);
+
 /* Binding Server */
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

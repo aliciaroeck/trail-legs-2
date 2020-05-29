@@ -16,8 +16,8 @@ mongoose.connect(connectionString, {
 mongoose.connection.on('disconnected', () => {
   console.log("Mongodb disconnected...");
 });
-
+  
 module.exports = {
-    City: require('/City'),
-    Trail: require('/Trail'),
+  City: require('/City'),
+  Trail: require('/Trail'),
 };
