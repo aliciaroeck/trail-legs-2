@@ -7,12 +7,20 @@ const db = require("../models");
 
 // index route
 router.get("/", (req,res) => {
-    res.send("index");
+    res.render("citys/index");
 });
 
 // show route
-router.get("/:id", (req,res) => {
-
-});
+/* router.get("/:id", (req,res) => {
+    db.City.findById(req.params.id).populate("trails").exec((err, foundCity){
+        if(err){
+            console.log(err);
+            res.send({message: "Internal Server Error"});
+        } else {
+            const context = {city: foundCity};
+            res.render("cities/show", context);
+        }
+    });
+}); */
 
 module.exports = router;

@@ -5,11 +5,6 @@ const db = require("../models");
 
 // route route /trails
 
-// index route
-router.get("/", (req,res) => {
-    res.send("index");
-});
-
 // new route
 router.get("/new", (req,res) => {
     res.send("new");
@@ -21,14 +16,34 @@ router.post("/", (req,res) => {
 });
 
 // show route
-router.get("/:id", (req,res) => {
-
-});
+/* router.get("/:id", (req,res) => {
+    db.Trail.findById(req.params.id)
+}); */
 
 // edit (view) route
-router.get("/:id")
+/* router.get("/:id/edit", (req,res) => {
+    db.Trail.findById(req.params.id, (err, foundTrail) => {
+        if(err){
+            console.log(err);
+            res.send({message: "Internal Server Error"});
+        } else {
+            const context = {trail: foundTrail};
+            res.render("trails/edit", context);
+        }
+    });
+}); */
 
 // update route
+/* router.put("/:id", (req,res) => {
+    db.Trail.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedTrail) => {
+        if(err){
+            console.log(err);
+            res.send({message: "Internal Server Error"});
+        } else {
+            res.redirect(`/trails/${updatedTrail._id}`);
+        }
+    });
+}); */
 
 // delete route
 
