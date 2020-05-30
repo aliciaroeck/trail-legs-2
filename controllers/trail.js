@@ -23,9 +23,9 @@ router.post("/", (req,res) => {
 });
 
 // show route
-router.get("/:id", (req,res) => {
+/* router.get("/:id", (req,res) => {
     db.Trail.findById(req.params.id)
-});
+}); */
 
 // edit (view) route
 /* router.get("/:id/edit", (req,res) => {
