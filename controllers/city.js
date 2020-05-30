@@ -7,7 +7,15 @@ const db = require("../models");
 
 // index route
 router.get("/", (req,res) => {
-    res.render("citys/index");
+    db.City.find({}, (err,allCities) => {
+        if(err){
+            console.log(err);
+            res.send({ message: "Internal Server Error" });
+          } else {
+            const context = {cities: allCities}
+            res.render("cities/index", context);
+          }    
+    })
 });
 
 // show route

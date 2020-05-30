@@ -12,7 +12,7 @@ router.get("/new", (req,res) => {
 
 // create route
 router.post("/", (req,res) => {
-
+    db.Trail.create()
 });
 
 // show route

@@ -7,5 +7,15 @@
 </head>
 <body>
     <h1>All Cities</h1>
+    <main>
+        <h2>List of Cities</h2>
+        <ul>
+          <% cities.forEach(city => { %>
+              <li>
+                <a href="/cites/<%= city._id %>"><%= city.name %></a>
+              </li>
+          <% }); %>
+        </ul>
+      </main>
 </body>
 </html>
