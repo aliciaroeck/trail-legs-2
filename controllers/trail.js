@@ -12,7 +12,14 @@ router.get("/new", (req,res) => {
 
 // create route
 router.post("/", (req,res) => {
-    db.Trail.create()
+    db.Trail.create(req.body, (err, createdTrail) => {
+      if(err){
+          console.log(err);
+          res.send({message: "Internal Server Error"});
+      } else {
+          res.redirect(`/trails/${createdTrail._id}`);
+      }
+    });
 });
 
 // show route
