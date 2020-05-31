@@ -25,7 +25,7 @@ app.use(express.static(__dirname+"/public"));
 
 // root routes
 app.get("/", (req,res) => {
-    res.send("index");
+    res.render("index");
 });
 
 // city routes
