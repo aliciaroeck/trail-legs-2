@@ -6,12 +6,13 @@ const db = require("../models");
 // route route /trails
 
 // new route
-router.get("/new", (req,res) => {
+router.get("/:cityid/new", (req,res) => {
+    db.City.findById()
     res.send("new");
 });
 
 // create route
-router.post("/", (req,res) => {
+router.post("/:cityid", (req,res) => {
     db.Trail.create(req.body, (err, createdTrail) => {
       if(err){
           console.log(err);
