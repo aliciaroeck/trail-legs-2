@@ -1,3 +1,14 @@
 body {
     background-color: #e0e0db;
+    
+}
+
+header {
+    font-Family: 'Raleway', Sans-Serif;
+    font-Size: 44px;
+}
+
+main {
+    Font-Family: 'Open Sans', Sans-Serif;
+    Font-Size: 15px;
 }
