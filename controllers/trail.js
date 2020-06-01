@@ -79,5 +79,25 @@ router.put("/:id", (req,res) => {
 });
 
 // delete route
+router.delete("/:id", (req,res) => {
+    db.Trail.findByIdAndDelete(req.params.id, (err, deletedTrail)=>{
+        if(err){
+            console.log(err);
+            res.send({message: "Internal Server Error"});
+        } else {
+            db.City.findById(deletedTrail.city, (err, foundCity) => {
+                if(err){
+                    console.log(err);
+                    res.send({message: "Internal Server Error"});
+                } else {
+                    foundCity.trails.remove(deletedTrail);
+                    foundCity.save();
+                    res.redirect(`/cities/${foundCity._id}`)
+                }    
+            });
+        }  
+    });
+});
+
 
 module.exports = router;
