@@ -9,7 +9,7 @@ const trailSchema = new mongoose.Schema({
     Image: {type: String, required: true},
     city: {
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Trail' 
+        ref: 'City' 
     },
 });
 // Model
