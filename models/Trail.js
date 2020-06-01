@@ -7,7 +7,7 @@ const trailSchema = new mongoose.Schema({
     location: {type: String, required: true},
     description: {type: String, required: true},
     Image: {type: String, required: true},
-    City: {
+    city: {
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Trail' 
     },

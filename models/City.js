@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const citySchema = new mongoose.Schema({
     name: {type: String, required: true},
     state: {type: String, required: true},
-    Trail: [{
+    trails: [{
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Trail' 
       }]
