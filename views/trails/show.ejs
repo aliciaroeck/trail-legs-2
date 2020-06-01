@@ -28,8 +28,9 @@
 
         <section class="icons">
         <!-- delete icon -->
-        <i class="fa fa-trash"></i>
-
+        <form action="/trails/<%=trail._id%>?_method=DELETE" method="POST">
+        <button><i class="fa fa-trash"></i></button>
+        </form>
         <!-- edit icon -->
         <i class="fa fas-pen"></i>
         <a href="/trails/<%=trail._id%>/edit">Edit</a>
