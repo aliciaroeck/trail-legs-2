@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>City Name</title>
 </head>
 <body>
@@ -34,7 +35,13 @@
         </section>
 
         <!-- create new trail icon -->
-        <i class="fas fa-plus-circle"></i>
+        <form action="/trails/<%=city._id%>/new" method="get">
+            <button>
+                <i class="fa fa-plus-circle"></i>
+            </button>
+            </a>
+        </form>
+        
     </main>
     <footer>
         <p>Copyright</p>
