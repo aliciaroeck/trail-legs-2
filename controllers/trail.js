@@ -18,7 +18,7 @@ router.post("/:cityid", (req,res) => {
           console.log(err);
           res.send({message: "Internal Server Error"});
       } else {
-          res.redirect(`/trails/${createdTrail._id}`);
+          res.redirect(`/:cityid/${createdTrail._id}`);
       }
     });
 });
