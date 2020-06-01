@@ -23,6 +23,16 @@
         <!-- TODO add city name -->
         <!-- TODO add trails list w/ trail name and location -->
 
+        <section>
+            <h2>Trails</h2>
+            <% city.trails.forEach(trail => { %> 
+                <a href="/trails/<%= trail._id %>"><%= trail.name %></a>
+                <% }); %>
+            <% if(city.trails.length === 0){ %>
+                <p>No trails available.</p>
+                <% }; %>
+        </section>
+
         <!-- create new trail icon -->
         <i class="fas fa-plus-circle"></i>
     </main>

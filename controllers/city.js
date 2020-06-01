@@ -25,7 +25,7 @@ router.get("/:id", (req,res) => {
             console.log(err);
             res.send({message: "Internal Server Error"});
         } else {
-            const context = {city: foundCity};
+            const context = {city: foundCity}
             res.render("cities/show", context);
         }
     });
