@@ -24,15 +24,15 @@
     <main>
         <h1>Edit Trail Name</h1>
         <!-- TODO route back to trail after edit -->
-        <form action="/cities" method="post">
+        <form action="/trails/<%= city._id %>" method="POST">
 
         <!-- dropdown menu of all cities -->
         <select name="select_city">
-            <option value="#">city name</option>
+            <option value="<%= city._id %>"><%= city.name %></option>
         </select>
 
-        <input type="text" name="name" placeholder="">
-        <input type="text" name="location" placeholder="">
+        <input type="text" name="name" placeholder="<%= trail.name %>">
+        <input type="text" name="location" placeholder="<%= trail.location %>">
         <textarea name="description"cols="30" rows="10">
             <!-- TODO add whatever was in description before -->
         </textarea>
