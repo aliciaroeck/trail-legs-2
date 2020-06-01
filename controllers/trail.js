@@ -35,7 +35,7 @@ router.post("/:cityid", (req,res) => {
 });
 
 // show route
-router.get("/:trailid", (req,res) => {
+router.get("/:id", (req,res) => {
     db.Trail.findById(req.params.id, (err, foundTrail) => {
         if(err){
             console.log(err);
@@ -50,15 +50,15 @@ router.get("/:trailid", (req,res) => {
 // edit (view) route
 router.get("/:id/edit", (req,res) => {
     db.Trail.findById(req.params.id, (err, foundTrail) => {
-                if(err){
-                    console.log(err);
-                    res.send({message: "Internal Server Error"});
-                } else {
-                    const context = {trail: foundTrail}
-                    res.render("trails/edit", context);
-                }
-            });
-        });
+        if(err){
+            console.log(err);
+            res.send({message: "Internal Server Error"});
+        } else {
+            const context = {trail: foundTrail}
+            res.render("trails/edit", context);
+        }
+    });
+});
 
 // update route
 /* router.put("/:id", (req,res) => {
