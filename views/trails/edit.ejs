@@ -6,6 +6,43 @@
     <title>Edit Trail</title>
 </head>
 <body>
-    <h1>Edit Trail</h1>
+    <header>
+
+        <!-- navigation and app name -->
+        <section class="nav_name">
+            <h3> Trail Legs </h3>
+            <i class="fa fa-bars"></i>
+            <nav>
+                <a href="/home">Home</a>
+                <a href="/cities">Cities</a>
+                <!-- TODO add city name path -->
+                <!-- <a href="/cities/city._id">city name</a> -->
+            </nav>
+        </section>
+    </header>
+    <main>
+        <h1>Edit Trail Name</h1>
+        <!-- TODO route back to trail after edit -->
+        <form action="/cities" method="post">
+
+        <!-- dropdown menu of all cities -->
+        <select name="select_city">
+            <option value="#">city name</option>
+        </select>
+
+        <input type="text" name="name" placeholder="">
+        <input type="text" name="location" placeholder="">
+        <textarea name="description"cols="30" rows="10">
+            <!-- TODO add whatever was in description before -->
+        </textarea>
+        <input type="submit" value="Submit">
+
+        <!-- TODO make a cancel button -->
+
+        </form>
+    </main>
+    <footer>
+        <p>Copyright</p>
+    </footer>
 </body>
 </html>
