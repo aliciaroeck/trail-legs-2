@@ -28,11 +28,11 @@
         <h1>Edit Trail Name</h1>
         
         <!-- TODO route back to city name after creation -->
-        <form action="/cities" method="post">
+        <form action="/trails/<%= city._id %>" method="POST">
 
         <!-- dropdown menu of all cities -->
         <select name="select_city">
-            <option value="#">city name</option>
+            <option value="<%=city._id%>"><%= city.name %></option>
         </select>
 
         <input type="text" name="name" placeholder="">
