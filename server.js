@@ -2,6 +2,7 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const methodOverride = require("method-override");
+const db = require("./models");
 
 /* Internal Modules */
 const controllers = require("./controllers");
@@ -25,7 +26,15 @@ app.use(express.static(__dirname+"/public"));
 
 // root routes
 app.get("/", (req,res) => {
-    res.render("index");
+    db.City.find({}, (err, allCities) => {
+        if(err){
+            console.log(err);
+            return res.send({message: "Internal Server Error"});
+          } else {
+            const context = {cities: allCities};
+            res.render("index", context);
+          }
+    })
 });
 
 // city routes

@@ -42,7 +42,7 @@ router.post("/:cityid", (req,res) => {
 
 // show route
 router.get("/:id", (req,res) => {
-    db.Trail.findById(req.params.id, (err, foundTrail) => {
+    db.Trail.findById(req.params.id).populate("city").exec((err, foundTrail) => {
         if(err){
             console.log(err);
             res.send({message: "Internal Server Error"});
@@ -55,7 +55,7 @@ router.get("/:id", (req,res) => {
 
 // edit (view) route
 router.get("/:id/edit", (req,res) => {
-    db.Trail.findById(req.params.id, (err, foundTrail) => {
+    db.Trail.findById(req.params.id).populate("city").exec((err, foundTrail) => {
         if(err){
             console.log(err);
             res.send({message: "Internal Server Error"});
