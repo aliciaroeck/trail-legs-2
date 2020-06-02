@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="/styles/cities-show.css">
     <title>City Name</title>
 </head>
 <body>
@@ -23,13 +23,12 @@
     </header>
     <main>
         
-        <!-- TODO add city name -->
-        <!-- TODO add trails list w/ trail name and location -->
+        <h3><%=city.name%>, <%=city.state%></h3>
 
         <section>
             <h2>Trails</h2>
             <% city.trails.forEach(trail => { %> 
-                <a href="/trails/<%= trail._id %>"><%= trail.name %></a>
+                <div><a href="/trails/<%= trail._id %>"><%= trail.name %><br><%=trail.location%></a></div>
                 <% }); %>
             <% if(city.trails.length === 0){ %>
                 <p>No trails available.</p>

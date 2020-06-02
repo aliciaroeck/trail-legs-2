@@ -19,7 +19,8 @@ router.post("/:cityid", (req,res) => {
         city: req.params.cityid,
         name: req.body.name,
         location: req.body.location,
-        description: req.body.description
+        description: req.body.description,
+        image: req.body.image
     }
     db.Trail.create(newTrail, (err, createdTrail) => {
       if(err){
