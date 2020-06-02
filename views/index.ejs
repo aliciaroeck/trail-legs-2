@@ -30,13 +30,14 @@
     <main>
         <!-- dropdown menu to select citiy -->
         <section class="select-city">
-            <h2>Find Your City</h2>
-            <select name="select_city">
-                <option selected disabled>Select a City</option>
-                <% cities.forEach(city => { %>
-                    <option value="<%=city._id%>"><%=city.name%></option>
-                <% }) %>
-            </select>
+            <h2>Find Your City <i class="fa fa-angle-down"></i></h2>
+
+                    <% cities.forEach(city => { %>
+                        <ul>
+                            <li><a href="/cities/<%=city._id%>"><%=city.name%></a></li>
+                        </ul>
+                    <% }) %>
+
         </section>
 
         <!-- about the app -->
