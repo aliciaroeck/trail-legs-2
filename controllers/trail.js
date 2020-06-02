@@ -22,7 +22,6 @@ router.post("/:cityid", (req,res) => {
         description: req.body.description
     }
     db.Trail.create(newTrail, (err, createdTrail) => {
-        console.log(createdTrail);
       if(err){
           console.log(err);
           return res.send({message: "Internal Server Error"});
@@ -66,7 +65,6 @@ router.get("/:id/edit", (req,res) => {
                     console.log(err);
                     res.send({message: "Internal Server Error"});
                 }
-                console.log(foundCity, "foundCity");
             })
             const context = {trail: foundTrail}
             res.render("trails/edit", context);
