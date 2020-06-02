@@ -64,10 +64,12 @@ router.get("/:id/edit", (req,res) => {
                 if(err){
                     console.log(err);
                     res.send({message: "Internal Server Error"});
+                } else {
+                foundTrail.city = foundCity;
+                const context = {trail: foundTrail}
+                res.render("trails/edit", context);
                 }
             })
-            const context = {trail: foundTrail}
-            res.render("trails/edit", context);
         }
     });
 });
