@@ -17,15 +17,12 @@ main {
     overflow: hidden;
 }
 
-
-
 .select_list {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    
 }
 
 .select_city {
@@ -38,5 +35,30 @@ main {
 }
 
 .select:hover .select_list {
+    display: block;
+}
+
+.nav {
+    overflow: hidden;
+}
+
+.nav_list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+}
+
+.nav_link {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;  
+}
+
+.nav:hover .nav_list {
     display: block;
 }
