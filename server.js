@@ -21,6 +21,7 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 
 app.use(express.static(__dirname+"/public"));
+app.use(express.static(__dirname+"/images"));
 
 /* Routes */
 

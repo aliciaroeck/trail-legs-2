@@ -1,25 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #e0e0db;
     
 }
 
+.header-slogan {
+    font-Family: 'Raleway', Sans-Serif;
+    background-image: url(/header/home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding-bottom: 150px;
+}
+
 header {
     font-Family: 'Raleway', Sans-Serif;
     font-Size: 20px;
+    padding: 15px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 main {
     Font-Family: 'Open Sans', Sans-Serif;
     Font-Size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .slogan {
     text-align: center;
 }
 
+.select_container {
+    background-color: aqua;
+}
+
 .select {
     overflow: hidden;
     width: 175px;
+    margin: 50px 0;
 }
 
 .select_list {
