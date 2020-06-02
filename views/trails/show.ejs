@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/trails-show.css">
     <title>View Trail</title>
 </head>
 <body>
@@ -23,25 +23,29 @@
         </section>
     </header>
     <main>
-        <article>
-        
-        <h2><%=trail.name%></h2>
-        
-        <h4><%=trail.location%> - <%=trail.city.name%>, <%=trail.city.state%></h4>
-        
-        <p><%=trail.description%></p>
-        
-        </article>
-        <section class="icons">
-        <!-- delete icon -->
-        <form action="/trails/<%=trail._id%>?_method=DELETE" method="POST">
-        <button><i class="fa fa-trash"></i></button>
-        </form>
-        <!-- edit icon -->
-        <a href="/trails/<%=trail._id%>/edit"><i class="fas fa-pen"></i></a>
-        
 
-        </section>
+        <div class="trail_header">
+            <div class="trail_text">
+                    <h2><%=trail.name%></h2>
+                    <h4><%=trail.location%> - <%=trail.city.name%>, <%=trail.city.state%></h4>
+            </div>
+            <div class="trail_img">
+                <img src="<%=trail.image%>" alt="<%=trail.name%>">
+            </div>
+        <div>
+            <p><%=trail.description%></p>
+            
+
+            
+            <!-- delete icon -->
+            <form action="/trails/<%=trail._id%>?_method=DELETE" method="POST">
+            <button><i class="fa fa-trash"></i></button>
+            </form>
+            <!-- edit icon -->
+            <a href="/trails/<%=trail._id%>/edit"><i class="fas fa-pen"></i></a>
+        </div>
+
+    
     </main>
     <footer>
         <p>Copyright</p>
