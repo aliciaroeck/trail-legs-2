@@ -32,10 +32,10 @@
         <section class="select-city">
             <h2>Find Your City</h2>
             <select name="select_city">
+                <option selected disabled>Select a City</option>
                 <% cities.forEach(city => { %>
                     <option value="<%=city._id%>"><%=city.name%></option>
                 <% }) %>
-                
             </select>
         </section>
 
