@@ -13,8 +13,13 @@ main {
     Font-Size: 15px;
 }
 
+.slogan {
+    text-align: center;
+}
+
 .select {
     overflow: hidden;
+    width: 175px;
 }
 
 .select_list {
@@ -40,6 +45,8 @@ main {
 
 .nav {
     overflow: hidden;
+    width: 25px;
+    
 }
 
 .nav_list {

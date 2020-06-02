@@ -30,7 +30,11 @@
                     <h4><%=trail.location%> - <%=trail.city.name%>, <%=trail.city.state%></h4>
             </div>
             <div class="trail_img">
-                <img src="<%=trail.image%>" alt="<%=trail.name%>">
+                <style>
+                    .trail_img {
+                        background-image: url(<%=trail.image%>);
+                    };
+                </style>
             </div>
         <div>
             <p><%=trail.description%></p>
