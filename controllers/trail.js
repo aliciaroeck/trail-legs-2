@@ -22,6 +22,7 @@ router.post("/:cityid", (req,res) => {
         description: req.body.description
     }
     db.Trail.create(newTrail, (err, createdTrail) => {
+        console.log(createdTrail);
       if(err){
           console.log(err);
           return res.send({message: "Internal Server Error"});
@@ -55,11 +56,18 @@ router.get("/:id", (req,res) => {
 
 // edit (view) route
 router.get("/:id/edit", (req,res) => {
-    db.Trail.findById(req.params.id).populate("city").exec((err, foundTrail) => {
+    db.Trail.findById(req.params.id, (err, foundTrail) => {
         if(err){
             console.log(err);
             res.send({message: "Internal Server Error"});
         } else {
+            db.City.findById(foundTrail.city, (err, foundCity) => {
+                if(err){
+                    console.log(err);
+                    res.send({message: "Internal Server Error"});
+                }
+                console.log(foundCity, "foundCity");
+            })
             const context = {trail: foundTrail}
             res.render("trails/edit", context);
         }
@@ -73,7 +81,7 @@ router.put("/:id", (req,res) => {
             console.log(err);
             res.send({message: "Internal Server Error"});
         } else {
-            res.redirect(`/trails/${updatedTrail._id}`)
+            res.redirect(`/trails/${updatedTrail._id}`);
         }
     });
 });
