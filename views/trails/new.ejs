@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Create Trail</title>
 </head>
 <body>
@@ -17,9 +17,7 @@
             <nav>
                 <a href="/">Home</a>
                 <a href="/cities">Cities</a>
-               
-                <!-- TODO add city name path -->
-                <!-- <a href="/cities/city._id">city name</a> -->
+                <a href="/cities/<%=city._id%>"><%=city.name%></a>
             
             </nav>
         </section>
@@ -27,7 +25,7 @@
     <main>
         <h1>Create New Trail</h1>
         
-        <!-- TODO route back to city name after creation -->
+        <!-- route back to trail name after creation -->
         <form action="/trails/<%= city._id %>" method="POST">
 
         <!-- dropdown menu of all cities -->
