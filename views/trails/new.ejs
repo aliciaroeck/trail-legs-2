@@ -33,14 +33,11 @@
             <option value="<%=city._id%>"><%= city.name %></option>
         </select>
 
-        <input type="text" name="name" placeholder="">
-        <input type="text" name="location" placeholder="">
-        <textarea name="description"cols="30" rows="10">
-            <!-- TODO add whatever needs to be added to description -->
-        </textarea>
-        <input type="submit" value="Submit">
-
-        <!-- TODO make a cancel button -->
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="location" placeholder="Location">
+        <textarea name="description"cols="30" rows="10" placeholder="Description of the trail..."></textarea>
+        <button type="submit"><i class="fas fa-check"></i></button>
+        <a href="/cities/<%= city._id %>"><i class="fas fa-times"></i></a>
 
         </form>
     </main>

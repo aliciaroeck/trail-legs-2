@@ -33,12 +33,10 @@
         </select>
         <input type="text" name="name" value="<%= trail.name %>">
         <input type="text" name="location" value="<%= trail.location %>">
-        <textarea name="description"cols="30" rows="10">
-            <!-- TODO add whatever was in description before -->
+        <textarea name="description"cols="30" rows="10"><%=trail.description%>
         </textarea>
-        <input type="submit" value="Submit">
-
-        <!-- TODO make a cancel button -->
+        <button type="submit"><i class="fas fa-check"></i></button>
+        <a href="/trails/<%= trail._id %>"><i class="fas fa-times"></i></a>
 
         </form>
     </main>
