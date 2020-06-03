@@ -85,14 +85,16 @@ footer{
 }
 
 .cities{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     justify-content: center;
     flex-direction: row;
     align-items: center;
 }
 
 .cities_list{
-    margin-left: 10px;
+    margin-left: 50px;
+    margin-bottom: 50px;
     position: static;
 }
 
@@ -104,10 +106,12 @@ footer{
 
 .cities_square{
     text-align: center;
-    width: 100px;
-    height: 100px;
+    font-size: 25px;
+    width: 200px;
+    height: 200px;
     padding: 20px;
     flex-wrap: wrap;
+    padding-top: 80px;
     display: inline-block;
     background-color: var(--white);
     opacity: .6;
