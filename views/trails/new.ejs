@@ -4,44 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
     <link rel="stylesheet" href="/styles/new.css">
     <title>Create Trail</title>
 </head>
 <body>
-    <h1>Create New Trail</h1>
     <header>
-
         <!-- navigation and app name -->
-        <section class="nav_name">
-            <h3> Trail Legs </h3>
+        <h3> Trail Legs </h3>
+        <div class="nav">
             <i class="fa fa-bars"></i>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/cities">Cities</a>
-                <a href="/cities/<%=city._id%>"><%=city.name%></a>
-            
-            </nav>
-        </section>
+            <div class="nav_list">
+                <a href="/" class="nav_link">Home</a>
+                <a href="/cities" class="nav_link">Cities</a>
+                <a href="/cities/<%=city._id%>" class="nav_link"><%=city.name%></a>
+            </div>
+        </div>
     </header>
     <main>
-        <h1>Create New Trail</h1>
+        <h2>Create New Trail</h2>
         
         <!-- route back to trail name after creation -->
+        <section class="main_content">
         <form action="/trails/<%= city._id %>" method="POST">
 
         <!-- dropdown menu of all cities -->
         <select name="city">
             <option value="<%=city._id%>"><%= city.name %></option>
         </select>
-
+        <br />
+        <br />
         <input type="text" name="name" placeholder="Name">
+        <br />
+        <br />
         <input type="text" name="location" placeholder="Location">
+        <br />
+        <br />
         <textarea name="description"cols="30" rows="10" placeholder="Description of the trail..."></textarea>
+        <br />
+        <br />
         <input type="text" name="image" placeholder="Image URL">
+        <br />
+        <br />
         <button type="submit"><i class="fas fa-check"></i></button>
         <a href="/cities/<%= city._id %>"><i class="fas fa-times"></i></a>
 
         </form>
+        </section>
     </main>
     <footer>
         <p>Copyright</p>
