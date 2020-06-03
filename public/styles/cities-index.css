@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     /*  colors  */
         --white: #f1f1f1;
@@ -8,3 +14,60 @@
         --large-font: 'Raleway', Sans-Serif;
         --small-font: 'Open Sans', Sans-Serif;
 }
+
+header {
+    font-Family: var(--large-font);
+    font-Size: 20px;
+    padding: 15px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+    background-image: url(/header/cities-index.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+    color: var(--white);
+}
+
+main {
+    Font-Family: var(--small-font);
+    Font-Size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px;
+}
+
+footer{
+    background-color: var(--green);
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+    overflow: hidden;
+    width: 25px;
+}
+
+.nav_list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+}
+
+.nav_link {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;  
+}
+
+.nav:hover .nav_list {
+    display: block;
+}
+
