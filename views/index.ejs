@@ -9,6 +9,7 @@
     <title>Trail Legs</title>
 </head>
 <body>
+    <section class="header-slogan">
     <header>
         <h3> Trail Legs </h3>
         <!-- navigation and app name -->
@@ -19,16 +20,16 @@
                 <a href="/cities" class="nav_link">Cities</a>
             </div>
         </div>
-
+    </header>
         <!-- trail legs slogan -->
-        <section class="slogan">
+        <div class="slogan">
             <h1>Your favorite Trails</h1>
             <h3>in one place</h3>
-        </section>
-
-    </header>
+        </div>
+    </section>
     <main>
         <!-- dropdown menu to select citiy -->
+        <section class="select_container">
         <div class="select">
             <h2 class="select_dropdown">Find Your City <i class="fa fa-angle-down"></i></h2>
             <div class="select_list">
@@ -36,8 +37,8 @@
                             <a href="/cities/<%=city._id%>" class="select_city"><%=city.name%></a>
                     <% }) %>
             </div>
-
         </div>
+        </section>
 
         <!-- about the app -->
         <h4>About Us</h4>
