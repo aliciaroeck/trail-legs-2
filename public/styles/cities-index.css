@@ -100,11 +100,11 @@ footer{
 
 .cities_list a{
     text-decoration: none;
-    color: var(--green);
+    color: var(--white);
     font-weight: 900;
 }
 
-.cities_square{
+.cities_square {
     text-align: center;
     font-size: 25px;
     width: 200px;
@@ -113,6 +113,6 @@ footer{
     flex-wrap: wrap;
     padding-top: 80px;
     display: inline-block;
-    background-color: var(--white);
     opacity: .6;
-}
+    background-size: cover;
+};
