@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     /*  colors  */
         --white: #f1f1f1;
@@ -7,4 +13,119 @@
     /* font  */
         --large-font: 'Raleway', Sans-Serif;
         --small-font: 'Open Sans', Sans-Serif;
+}
+
+header {
+    font-Family: var(--large-font);
+    font-Size: 20px;
+    padding: 15px;
+    padding-bottom: 50px;
+    background-image: url(/header/trial-edit.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+    color: var(--white);
+}
+
+main {
+    Font-Family: var(--small-font);
+    Font-Size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: var(--tan);
+}
+
+h2 {
+    padding-bottom: 30px;
+    font-size: 35px;
+    color: var(--green);
+}
+
+footer {
+    background-color: var(--green);
+    text-align: center;
+    padding: 20px;
+    color: var(--white);
+}
+
+.nav {
+    overflow: hidden;
+    width: 25px;
+}
+
+.nav_list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+}
+
+.nav_link {
+    float: none;
+    color: var(--green);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;  
+}
+
+.nav_link:hover {
+    background-color: lightgray;
+}
+
+.nav:hover .nav_list {
+    display: block;
+}
+
+.main_content {
+    text-align: center;
+}
+
+button {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--green);
+}
+
+button:hover {
+    color: var(--white);
+}
+
+.fa-times {
+    font-size: 30px;
+    color: var(--green);
+}
+
+.fa-times:hover {
+    color: var(--white);
+}
+
+input {
+    padding: 3px;
+    border: 2px solid var(--green);
+    border-radius: 3px;
+    outline: none;
+}
+
+textarea {
+    padding: 3px;
+    border: 2px solid var(--green);
+    border-radius: 3px;
+    outline: none;
+}
+
+select {
+    padding: 3px;
+    border: 2px solid var(--green);
+    border-radius: 3px;
+    outline: none;
 }

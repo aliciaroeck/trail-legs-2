@@ -96,9 +96,17 @@ button {
     color: var(--green);
 }
 
+button:hover {
+    color: var(--white);
+}
+
 .fa-times {
     font-size: 30px;
     color: var(--green);
+}
+
+.fa-times:hover {
+    color: var(--white);
 }
 
 input {
