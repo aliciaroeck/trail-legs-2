@@ -6,40 +6,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
     <link rel="stylesheet" href="/styles/edit.css">
-    <title>Edit Trail</title>
+    <title>Edit <%=trail.name%></title>
 </head>
 <body>
     <header>
-
         <!-- navigation and app name -->
-        <section class="nav_name">
-            <h3> Trail Legs </h3>
+        <h3> Trail Legs </h3>
+        <div class="nav">
             <i class="fa fa-bars"></i>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/cities">Cities</a>
-                <a href="/cities/<%=trail.city._id%>"><%=trail.city.name%></a>
-            </nav>
-        </section>
+        <div class="nav_list">
+            <a href="/" class="nav_link">Home</a>
+            <a href="/cities" class="nav_link">Cities</a>
+            <a href="/cities/<%=trail.city._id%>" class="nav_link"><%=trail.city.name%></a>
+        </div>
+        </div>
     </header>
     <main>
-        <h1>Edit Trail Name</h1>
-        <!-- TODO route back to trail after edit -->
-        <form action="/trails/<%= trail._id %>?_method=PUT" method="POST">
+        <h2>Edit <%=trail.name%></h2>
 
+        <section class="main_content">
+        <form action="/trails/<%= trail._id %>?_method=PUT" method="POST">
         <!-- dropdown menu of all cities -->
         <select name="city">
             <option value="<%=trail.city._id%>"><%= trail.city.name %></option>
         </select>
+            <br />
         <input type="text" name="name" value="<%= trail.name %>">
+            <br />
         <input type="text" name="location" value="<%= trail.location %>">
-        <textarea name="description"cols="30" rows="10"><%=trail.description%>
-        </textarea>
+            <br />
+        <textarea name="description"cols="30" rows="10"><%=trail.description%></textarea>
+            <br />
         <input type="text" name="image" value="<%= trail.image %>">
-        <button type="submit"><i class="fas fa-check"></i></button>
-        <a href="/trails/<%= trail._id %>"><i class="fas fa-times"></i></a>
+            <br />
+            <button type="submit"><i class="fas fa-check"></i></button>
+            <a href="/trails/<%= trail._id %>"><i class="fas fa-times"></i></a>
 
         </form>
+        </section>
     </main>
     <footer>
         <p>Copyright</p>
