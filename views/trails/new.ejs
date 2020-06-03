@@ -15,9 +15,9 @@
         <div class="nav">
             <i class="fa fa-bars"></i>
             <div class="nav_list">
-                <a href="/" class="nav_link">Home</a>
-                <a href="/cities" class="nav_link">Cities</a>
-                <a href="/cities/<%=city._id%>" class="nav_link"><%=city.name%></a>
+                <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
+                <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
+                <a href="/cities/<%=city._id%>" class="nav_link"><i class="fas fa-undo"></i> <%=city.name%></a>
             </div>
         </div>
     </header>
@@ -37,9 +37,17 @@
         <br />
         <input type="text" name="location" placeholder="Location">
         <br />
+        <select name="difficulty" required>
+            <option value="">Difficulty:</option>
+            <option value="easy">Easy</option>
+            <option value="moderate">Moderate</option>
+            <option value="hard">Hard</option>
+        </select>
+        <br />
         <textarea name="description"cols="30" rows="10" placeholder="Description of the trail..."></textarea>
         <br />
-        <input type="text" name="image" placeholder="Image URL">
+        <!-- <input type="text" name="image" placeholder="Image URL"> -->
+        <input type="url" name="image" placeholder="Image URL" pattern="https://.*" size="30" required>
         <br />
         <button type="submit"><i class="fas fa-check"></i></button>
         <a href="/cities/<%= city._id %>"><i class="fas fa-times"></i></a>

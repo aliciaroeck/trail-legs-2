@@ -19,6 +19,7 @@ router.post("/:cityid", (req,res) => {
         city: req.params.cityid,
         name: req.body.name,
         location: req.body.location,
+        difficulty: req.body.difficulty,
         description: req.body.description,
         image: req.body.image
     }
