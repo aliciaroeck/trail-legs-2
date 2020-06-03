@@ -15,19 +15,11 @@
         --small-font: 'Open Sans', Sans-Serif;
 }
 
+/* main tag style */
+
 body {
     background-color: var(--tan);
-    
-}
-
-.header-slogan {
-    font-Family: 'Raleway', Sans-Serif;
-    background-image: url(/header/home.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: var(--white);
-    padding-bottom: 150px;
+    color: var(--green);
 }
 
 header {
@@ -45,12 +37,65 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    color: var(--green);
+}
+
+footer{
+    background-color: var(--green);
+    text-align: center;
+    padding: 20px;
+    color: var(--white);
+}
+
+/* header styling */
+.header-slogan {
+    font-Family: 'Raleway', Sans-Serif;
+    background-image: url(/header/home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+    padding-bottom: 150px;
+    font-size: 40px;
 }
 
 .slogan {
     text-align: center;
 }
 
+/* drop down navigation */
+.nav {
+    overflow: hidden;
+    width: 25px;  
+}
+
+.nav_list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+}
+
+.nav_link {
+    float: none;
+    color: var(--green);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+.nav_link:hover {
+    background-color: lightgray;
+}
+
+.nav:hover .nav_list {
+    display: block;
+}
+
+/* drop down city navigation */
 .select_container {
     width: 100%;
     display: flex;
@@ -74,7 +119,7 @@ main {
 
 .select_city {
     float: none;
-    color: var(--black);
+    color: var(--green);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -89,44 +134,14 @@ main {
     display: block;
 }
 
-.nav {
-    overflow: hidden;
-    width: 25px;
-    
-}
-
-.nav_list {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
-}
-
-.nav_link {
-    float: none;
-    color: var(--black);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 14px;
-}
-
-.nav_link:hover {
-    background-color: lightgray;
-}
-
-.nav:hover .nav_list {
-    display: block;
-}
-
+/* main class styling */
 .about {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin: 50px 25px;
+    padding: 140px;
 }
 
 .about_container {
