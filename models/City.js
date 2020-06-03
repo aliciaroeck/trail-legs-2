@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const citySchema = new mongoose.Schema({
     name: {type: String, required: true},
     state: {type: String, required: true},
+    image: {type: String, required: true},
     trails: [{
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Trail' 

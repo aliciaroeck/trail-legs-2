@@ -21,16 +21,22 @@
       </div>
   </header>
   <main>
-    <h2>List of Cities</h2>
+    
 
     <!-- Loop through cities -->
     <div class="cities">
       <% cities.forEach(city => { %>
         <div class="cities_list">
-            <a href="/cities/<%= city._id %>" class="cities_square"><%= city.name %></a>
+          <a 
+            style="background-image: url(<%=city.image%>);"
+            href="/cities/<%= city._id %>" 
+            class="cities_square">
+            <%= city.name %>
+          </a>
         </div>
       <% }); %>
     </div>
+    <!-- second loop to add images -->
   </main>
   <footer>
       <p>Copyright</p>

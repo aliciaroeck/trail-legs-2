@@ -2,7 +2,8 @@ const db = require("./models");
 
 const portland = {
     name: "Portland",
-    state: "Oregon"
+    state: "Oregon",
+    image: "/cities/Portland.jpg",
 };
 
 db.City.create(portland, (error, createdCity) => {
@@ -15,7 +16,8 @@ db.City.create(portland, (error, createdCity) => {
 
 const seattle = {
     name: "Seattle",
-    state: "Washington"
+    state: "Washington",
+    image: "/cities/Seattle.jpg",
 };
 
 db.City.create(seattle, (error, createdCity) => {
@@ -28,7 +30,8 @@ db.City.create(seattle, (error, createdCity) => {
 
 const asheville = {
     name: "Asheville",
-    state: "North Carolina"
+    state: "North Carolina",
+    image: "/cities/Asheville.jpg",
 };
 
 db.City.create(asheville, (error, createdCity) => {
@@ -41,7 +44,8 @@ db.City.create(asheville, (error, createdCity) => {
 
 const denver = {
     name: "Denver",
-    state: "Colorado"
+    state: "Colorado",
+    image: "/cities/Denver.png",
 };
 
 db.City.create(denver, (error, createdCity) => {
@@ -54,7 +58,8 @@ db.City.create(denver, (error, createdCity) => {
 
 const flagstaff = {
     name: "Flagstaff",
-    state: "Arizona"
+    state: "Arizona",
+    image: "/cities/Flagstaff.png",
 };
 
 db.City.create(flagstaff, (error, createdCity) => {
@@ -67,7 +72,8 @@ db.City.create(flagstaff, (error, createdCity) => {
 
 const saltLakeCity = {
     name: "Salt Lake City",
-    state: "Utah"
+    state: "Utah",
+    image: "/cities/Salt.jpg",
 };
 
 db.City.create(saltLakeCity, (error, createdCity) => {
@@ -80,7 +86,8 @@ db.City.create(saltLakeCity, (error, createdCity) => {
 
 const boise = {
     name: "Boise",
-    state: "Idaho"
+    state: "Idaho",
+    image: "/cities/Boise.jpg",
 };
 
 db.City.create(boise, (error, createdCity) => {
@@ -93,7 +100,8 @@ db.City.create(boise, (error, createdCity) => {
 
 const sedona = {
     name: "Sedona",
-    state: "Arizona"
+    state: "Arizona",
+    image: "/cities/Sedona.jpg",
 };
 
 db.City.create(sedona, (error, createdCity) => {
