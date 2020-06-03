@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*  colors  */
+        --white: #f1f1f1;
+        --tan: #e0e0db;
+        --black: #1f1f1f;
+        --green: #404943;
+    /* font  */
+        --large-font: 'Raleway', Sans-Serif;
+        --small-font: 'Open Sans', Sans-Serif;
+}
+
+header {
+    font-Family: var(--large-font);
+    font-Size: 20px;
+    padding: 15px;
+    padding-bottom: 50px;
+    background-image: url(/header/cities-index.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+    color: var(--white);
+}
+
+main {
+    Font-Family: var(--small-font);
+    Font-Size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    padding-bottom: 200px;
+    background-color: var(--tan);
+}
+
+h2{
+    padding-bottom: 30px;
+    font-size: 35px;
+    color: var(--green);
+}
+
+footer{
+    background-color: var(--green);
+    text-align: center;
+    padding: 20px;
+    color: var(--white)
+}
+
+.nav {
+    overflow: hidden;
+    width: 25px;
+}
+
+.nav_list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+}
+
+.nav_link {
+    float: none;
+    color: var(--green);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;  
+}
+
+.nav_link:hover {
+    background-color: lightgray;
+}
+
+.nav:hover .nav_list {
+    display: block;
+}
+
+.cities{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cities_list{
+    margin-left: 10px;
+    position: static;
+}
+
+.cities_list a{
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 900;
+}
+
+.cities_square{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    flex-wrap: wrap;
+    display: inline-block;
+    background-color: var(--white);
+    opacity: .6;
+}

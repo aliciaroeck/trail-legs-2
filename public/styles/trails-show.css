@@ -1,3 +1,14 @@
+:root {
+/*  colors  */
+    --white: #f1f1f1;
+    --tan: #e0e0db;
+    --black: #1f1f1f;
+    --green: #404943;
+/* font  */
+    --large-font: 'Raleway', Sans-Serif;
+    --small-font: 'Open Sans', Sans-Serif;
+}
+
 .trail_header{
     width: 100px;
     height: 100px;
@@ -10,7 +21,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: #f1f1f1;
+    color: var(--white);
 }
 
 .trail_img{
