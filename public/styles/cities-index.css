@@ -93,8 +93,7 @@ footer{
 }
 
 .cities_list{
-    margin-left: 50px;
-    margin-bottom: 50px;
+    margin: 20px;
     position: static;
 }
 
@@ -113,6 +112,5 @@ footer{
     flex-wrap: wrap;
     padding-top: 80px;
     display: inline-block;
-    opacity: .6;
     background-size: cover;
 };
