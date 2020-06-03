@@ -30,22 +30,17 @@
         <select name="city">
             <option value="<%=trail.city._id%>"><%= trail.city.name %></option>
         </select>
-        <br />
-        <br />
+            <br />
         <input type="text" name="name" value="<%= trail.name %>">
-        <br />
-        <br />
+            <br />
         <input type="text" name="location" value="<%= trail.location %>">
-        <br />
-        <br />
+            <br />
         <textarea name="description"cols="30" rows="10"><%=trail.description%></textarea>
-        <br />
-        <br />
+            <br />
         <input type="text" name="image" value="<%= trail.image %>">
-        <br />
-        <br />
-        <button type="submit"><i class="fas fa-check"></i></button>
-        <a href="/trails/<%= trail._id %>"><i class="fas fa-times"></i></a>
+            <br />
+            <button type="submit"><i class="fas fa-check"></i></button>
+            <a href="/trails/<%= trail._id %>"><i class="fas fa-times"></i></a>
 
         </form>
         </section>
