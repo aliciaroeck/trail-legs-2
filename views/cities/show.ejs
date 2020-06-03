@@ -12,36 +12,40 @@
     <header>
 
         <!-- navigation and app name -->
-        <section class="nav_name">
-            <h3> Trail Legs </h3>
+        <h3> Trail Legs </h3>
+        <section class="nav">
             <i class="fa fa-bars"></i>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/cities">Cities</a>
+            <nav class="nav_list">
+                <a href="/" class="nav_link">Home</a>
+                <a href="/cities" class="nav_link">Cities</a>
             </nav>
         </section>
     </header>
     <main>
-        
-        <h3><%=city.name%>, <%=city.state%></h3>
+        <!-- displays city, state -->
+        <div class="trail_title">
+        <h3 class="trail_location"><%=city.name%>, <%=city.state%></h3>
 
+        <!-- lists trails in city -->
+        <h2 class="trails">Trails</h2>
+        </div>
         <section>
-            <h2>Trails</h2>
             <% city.trails.forEach(trail => { %> 
-                <div><a href="/trails/<%= trail._id %>"><%= trail.name %><br><%=trail.location%></a></div>
+                <div class="trail_name"><a href="/trails/<%= trail._id %>"><p class="name"><%= trail.name %></p><p class="location"><%=trail.location%></p></a></div>
                 <% }); %>
             <% if(city.trails.length === 0){ %>
-                <p>No trails available.</p>
+                <p>No trails have been added.</p>
                 <% }; %>
         </section>
 
         <!-- create new trail icon -->
-        <form action="/trails/<%=city._id%>/new" method="get">
-            <button>
-                <i class="fa fa-plus-circle"></i>
-            </button>
-            </a>
-        </form>
+        <div class="new">
+            <form action="/trails/<%=city._id%>/new" method="get">
+                <button>
+                    <i class="fa fa-plus-circle"></i>
+                </button>
+            </form>
+        </div>
         
     </main>
     <footer>
