@@ -21,7 +21,8 @@ router.post("/:cityid", (req,res) => {
         location: req.body.location,
         difficulty: req.body.difficulty,
         description: req.body.description,
-        image: req.body.image
+        image: req.body.image,
+        user: req.session.currentUser.id
     }
     db.Trail.create(newTrail, (err, createdTrail) => {
       if(err){
@@ -44,7 +45,7 @@ router.post("/:cityid", (req,res) => {
 
 // show route
 router.get("/:id", (req,res) => {
-    db.Trail.findById(req.params.id).populate("city").exec((err, foundTrail) => {
+    db.Trail.findById(req.params.id).populate("city user").exec((err, foundTrail) => {
         if(err){
             console.log(err);
             res.send({message: "Internal Server Error"});
