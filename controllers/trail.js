@@ -7,6 +7,9 @@ const db = require("../models");
 
 // new route
 router.get("/:cityid/new", (req,res) => {
+/*     if(!req.session.currentUser){
+        res.redirect("/login");
+    } */
     db.City.findById(req.params.cityid, (err, foundCity) => {
         const context = {city: foundCity}
         res.render("trails/new", context);
@@ -59,7 +62,7 @@ router.get("/:id", (req,res) => {
             console.log(err);
             res.send({message: "Internal Server Error"});
       } else {
-        const context = {trail: foundTrail}
+        const context = {trail: foundTrail, currentUser:req.session.currentUser.id}
         res.render("trails/show", context);
       }     
     });
@@ -72,14 +75,17 @@ router.get("/:id/edit", (req,res) => {
             console.log(err);
             res.send({message: "Internal Server Error"});
         } else {
+            if(foundTrail.user.toString() !== req.session.currentUser.id){
+                return res.send("You are not authorized!");
+            }
             db.City.findById(foundTrail.city, (err, foundCity) => {
                 if(err){
                     console.log(err);
                     res.send({message: "Internal Server Error"});
                 } else {
-                foundTrail.city = foundCity;
-                const context = {trail: foundTrail}
-                res.render("trails/edit", context);
+                    foundTrail.city = foundCity;
+                    const context = {trail: foundTrail, currentUser: req.session.currentUser.id}
+                    res.render("trails/edit", context);
                 }
             })
         }
@@ -112,8 +118,17 @@ router.delete("/:id", (req,res) => {
                 } else {
                     foundCity.trails.remove(deletedTrail);
                     foundCity.save();
-                    res.redirect(`/cities/${foundCity._id}`)
-                }    
+                }  
+                db.User.findById(req.session.currentUser.id, (err, foundUser) => {
+                    if(err){
+                        console.log(err);
+                        res.send({message: "Internal Server Error"});
+                    } else {
+                        foundUser.trails.remove(deletedTrail);
+                        foundUser.save();
+                        res.redirect(`/cities/${foundCity._id}`)
+                    }
+                })  
             });
         }  
     });

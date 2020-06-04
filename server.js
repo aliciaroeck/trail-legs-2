@@ -39,6 +39,13 @@ app.use(
 app.use(express.static(__dirname+"/public"));
 app.use(express.static(__dirname+"/images"));
 
+
+const authRequired = function (req, res, next) {
+  if (!req.session.currentUser) {
+    return res.redirect("/login");
+  }
+  next();
+};
 /* Routes */
 
 // root routes
@@ -64,7 +71,7 @@ app.use("/", controllers.auth);
 app.use("/cities", controllers.city);
 
 // trail routes
-app.use("/trails", controllers.trail);
+app.use("/trails", authRequired, controllers.trail);
 
 /* Binding Server */
 app.listen(PORT, () => {
