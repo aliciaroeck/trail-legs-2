@@ -80,20 +80,9 @@ router.get("/:id/edit", (req,res) => {
                     console.log(err);
                     res.send({message: "Internal Server Error"});
                 } else {
-/*                     db.User.findById(req.session.currentUser.id, (err, foundUser) => {
-                        if(err) {
-                        console.log(err);
-                        return res.send({message: "Internal Server Error"});
-                        } else {
-                            console.log(foundUser)
-                            if(foundUser){
-                                res.redirect("/login")
-                            } 
-                        }
-                    })  */ 
-                foundTrail.city = foundCity;
-                const context = {trail: foundTrail}
-                res.render("trails/edit", context);
+                    foundTrail.city = foundCity;
+                    const context = {trail: foundTrail}
+                    res.render("trails/edit", context);
                 }
             })
         }
@@ -126,8 +115,17 @@ router.delete("/:id", (req,res) => {
                 } else {
                     foundCity.trails.remove(deletedTrail);
                     foundCity.save();
-                    res.redirect(`/cities/${foundCity._id}`)
-                }    
+                }  
+                db.User.findById(req.session.currentUser.id, (err, foundUser) => {
+                    if(err){
+                        console.log(err);
+                        res.send({message: "Internal Server Error"});
+                    } else {
+                        foundUser.trails.remove(deletedTrail);
+                        foundUser.save();
+                        res.redirect(`/cities/${foundCity._id}`)
+                    }
+                })  
             });
         }  
     });
