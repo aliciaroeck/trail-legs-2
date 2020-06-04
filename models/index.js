@@ -20,4 +20,5 @@ mongoose.connection.on('disconnected', () => {
 module.exports = {
   City: require('./City'),
   Trail: require('./Trail'),
+  User: require('./User'),
 };
