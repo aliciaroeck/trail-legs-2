@@ -43,6 +43,20 @@
         <!-- about the app -->
         <section class="about_container">
         <div class="about">
+        <p>
+            <% if (user) { %>
+                Welcome, <%=user.username%>
+                <a href="/profile">Profile</a>
+                <form action="/logout?_method=DELETE" method="POST">
+                    <input type="submit" value="Logout">
+                </form>
+                
+                <% } else { %>
+                    <a href="/register">Register</a>
+                    <a href="/login">Login</a>
+                <% } %>
+            </p>
+            
         <h3>About Us</h4>
         <article>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae aliquam deserunt tenetur sapiente odit voluptatem itaque aliquid placeat a harum esse sit laborum possimus consequuntur, dicta est at rem.
