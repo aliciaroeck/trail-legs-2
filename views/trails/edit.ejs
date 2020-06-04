@@ -39,9 +39,10 @@
             <br />
         <input type="text" name="image" value="<%= trail.image %>">
             <br />
+            <% if(currentUser === trail.user.toString()) {%>
             <button type="submit"><i class="fas fa-check"></i></button>
             <a href="/trails/<%= trail._id %>"><i class="fas fa-times"></i></a>
-
+                <%}%>
         </form>
         </section>
     </main>

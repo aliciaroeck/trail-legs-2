@@ -62,7 +62,7 @@ router.get("/:id", (req,res) => {
             console.log(err);
             res.send({message: "Internal Server Error"});
       } else {
-        const context = {trail: foundTrail}
+        const context = {trail: foundTrail, currentUser:req.session.currentUser.id}
         res.render("trails/show", context);
       }     
     });
@@ -75,13 +75,16 @@ router.get("/:id/edit", (req,res) => {
             console.log(err);
             res.send({message: "Internal Server Error"});
         } else {
+            if(foundTrail.user.toString() !== req.session.currentUser.id){
+                return res.send("You are not authorized!");
+            }
             db.City.findById(foundTrail.city, (err, foundCity) => {
                 if(err){
                     console.log(err);
                     res.send({message: "Internal Server Error"});
                 } else {
                     foundTrail.city = foundCity;
-                    const context = {trail: foundTrail}
+                    const context = {trail: foundTrail, currentUser: req.session.currentUser.id}
                     res.render("trails/edit", context);
                 }
             })
