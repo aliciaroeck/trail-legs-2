@@ -49,10 +49,12 @@ app.get("/", (req,res) => {
             return res.send({message: "Internal Server Error"});
           } else {
             console.log(req.session);
-            const context = {cities: allCities};
+            const context = 
+            {cities: allCities,
+            user: req.session.currentUser};
             res.render("index", context);
           }
-    })
+    });
 });
 
 // auth route

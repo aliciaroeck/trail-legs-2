@@ -55,5 +55,21 @@ router.post("/login", async (req,res) => {
     }
 });
 
+// logout route
+router.delete("/logout", async (req,res) => {
+    await req.session.destroy();
+    res.redirect("/");
+});
+
+// profile route
+router.get("/profile", async (req, res) => {
+    try {
+      const foundUser = await db.User.findById(req.session.currentUser.id);
+      res.render("auth/profile", {user: foundUser});
+    } catch (err) {
+      res.send({err});
+    }
+  });
+
 
 module.exports = router;
