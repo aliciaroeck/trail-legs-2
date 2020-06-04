@@ -7,5 +7,12 @@
 </head>
 <body>
     <h1>Welcome!</h1>
+    <% console.log("trails", trails) %>
+    <section>
+        <% userTrails.trails.forEach(trail => { %>
+         <p><%=trail.name%></p>
+         <%console.log("trail", trail)%>
+        <% }) %>
+    </section>
 </body>
 </html>

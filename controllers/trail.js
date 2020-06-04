@@ -36,8 +36,17 @@ router.post("/:cityid", (req,res) => {
             } else {
                 foundCity.trails.push(createdTrail);
                 foundCity.save();
-                res.redirect(`/trails/${createdTrail._id}`);
                 }
+                db.User.findById(req.session.currentUser.id, (err, foundUser) => {
+                    if(err) {
+                    console.log(err);
+                    return res.send({message: "Internal Server Error"});
+                    } else {
+                        foundUser.trails.push(createdTrail);
+                        foundUser.save();
+                        res.redirect(`/trails/${createdTrail._id}`);
+                    }
+                })
             });
         }
     });

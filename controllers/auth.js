@@ -65,7 +65,14 @@ router.delete("/logout", async (req,res) => {
 router.get("/profile", async (req, res) => {
     try {
       const foundUser = await db.User.findById(req.session.currentUser.id);
-      res.render("auth/profile", {user: foundUser});
+      const foundTrails = await db.User.findById(req.session.currentUser.id).populate("trails").exec((err, foundTrails) => {
+          if (err) {
+            console.log(err);
+            res.send({message: "Internal Server Error"});
+          } else {
+            res.render("auth/profile", {user: foundUser, userTrails: foundTrails});
+          }
+      })
     } catch (err) {
       res.send({err});
     }
