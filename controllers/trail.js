@@ -7,6 +7,9 @@ const db = require("../models");
 
 // new route
 router.get("/:cityid/new", (req,res) => {
+/*     if(!req.session.currentUser){
+        res.redirect("/login");
+    } */
     db.City.findById(req.params.cityid, (err, foundCity) => {
         const context = {city: foundCity}
         res.render("trails/new", context);
@@ -77,6 +80,17 @@ router.get("/:id/edit", (req,res) => {
                     console.log(err);
                     res.send({message: "Internal Server Error"});
                 } else {
+/*                     db.User.findById(req.session.currentUser.id, (err, foundUser) => {
+                        if(err) {
+                        console.log(err);
+                        return res.send({message: "Internal Server Error"});
+                        } else {
+                            console.log(foundUser)
+                            if(foundUser){
+                                res.redirect("/login")
+                            } 
+                        }
+                    })  */ 
                 foundTrail.city = foundCity;
                 const context = {trail: foundTrail}
                 res.render("trails/edit", context);
