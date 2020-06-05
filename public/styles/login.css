@@ -23,7 +23,7 @@
 }
 
 .auth-sidebar {
-    background-image: url(/reglogin/register.jpg);
+    background-image: url(/reglogin/login.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -102,7 +102,7 @@ button:hover {
     width: 25px;
 }
 
-.login {
+.register {
     padding-top: 20px;
     font-size: 14px;
     color: var(--green);
@@ -112,6 +112,6 @@ a:link, a:visited, .home:visited {
     text-decoration: none;
 }
 
-.login:hover {
+.register:hover {
     text-decoration: underline;
 }
