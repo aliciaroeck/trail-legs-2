@@ -88,6 +88,7 @@ button {
     color: var(--green);
     transition: .3s;
     padding: 2px;
+    outline: none;
 }
 
 button:hover {
