@@ -43,10 +43,11 @@
                 </style>
             </div>
         <div class="trail_info">
-            <p class="description"><%=trail.description%><br />
-            Created by <%=trail.user.username%>
-            </p>
-            
+            <div class="description">
+            <h2 class="title">Description:</h2>
+            <p class="text"><%=trail.description%> </p>
+            <p class="creator">Created by <a href="/profile"><%=trail.user.username%></a></p>
+            </div>
             <% if(currentUser === trail.user._id.toString()) {%>
             <div class="icons">
                 <!-- delete icon -->
