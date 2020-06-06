@@ -83,6 +83,7 @@ footer{
     position: relative;
 }
 
+/* user auth nav */
 .user_login {
     float: right;
     font-size: 15px;

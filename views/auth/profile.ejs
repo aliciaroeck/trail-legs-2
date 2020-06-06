@@ -3,15 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/profile.css">
     <title>Profile</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <section>
-        <% userTrails.trails.forEach(trail => { %>
-         <p><%=trail.name%></p>
-         <%console.log("trail", trail)%>
-        <% }) %>
-    </section>
+    <header>
+        <!-- navigation and app name -->
+        <h3> Trail Legs </h3>
+        <section class="nav">
+            <i class="fa fa-bars"></i>
+            <nav class="nav_list">
+                <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
+                <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
+            </nav>
+        </section>
+
+    </header>
+    <main>
+        <section>
+            <h3>Your Trails</h3>
+            <% userTrails.trails.forEach(trail => { %>
+                <div class="trail_name"><%=trail.name%></div>
+            <%console.log("trail", trail)%>
+            <% }) %>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright</p>
+    </footer>
 </body>
 </html>
