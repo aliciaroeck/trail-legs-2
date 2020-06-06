@@ -19,10 +19,9 @@
                 <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
                 <a href="/cities/<%=trail.city._id%>" class="nav_link"><i class="fas fa-undo"></i> <%=trail.city.name%></a>
             </nav>
+
         </section>
     </header>
-
-
     <main>
         <!-- trail -->
         <div class="trail_header">
@@ -42,7 +41,7 @@
             Created by <%=trail.user.username%>
             </p>
             
-            <% if(currentUser === trail.user.toString()) {%>
+            <% if(currentUser === trail.user._id.toString()) {%>
             <div class="icons">
                 <!-- delete icon -->
                 <form action="/trails/<%=trail._id%>?_method=DELETE" method="POST">
