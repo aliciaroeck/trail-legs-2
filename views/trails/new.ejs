@@ -24,35 +24,48 @@
     <main>
         <h2>Create New Trail</h2>
         
-        <!-- route back to trail name after creation -->
         <section class="main_content">
-        <form action="/trails/<%= city._id %>" method="POST">
+        
+        <div class="form">
+            <form action="/trails/<%= city._id %>" method="POST">
 
         <!-- dropdown menu of all cities -->
-        <select name="city">
-            <option value="<%=city._id%>"><%= city.name %></option>
-        </select>
-        <br />
-        <input type="text" name="name" placeholder="Name">
-        <br />
-        <input type="text" name="location" placeholder="Location">
-        <br />
-        <select name="difficulty" required>
-            <option value="">Difficulty:</option>
-            <option value="easy">Easy</option>
-            <option value="moderate">Moderate</option>
-            <option value="hard">Hard</option>
-        </select>
-        <br />
-        <textarea name="description"cols="30" rows="10" placeholder="Description of the trail..."></textarea>
-        <br />
-        <!-- <input type="text" name="image" placeholder="Image URL"> -->
-        <input type="url" name="image" placeholder="Image URL" pattern="https://.*" size="30" required>
-        <br />
-        <button type="submit"><i class="fas fa-check"></i></button>
-        <a href="/cities/<%= city._id %>"><i class="fas fa-times"></i></a>
+            <label for="city">City</label>
+                <br />
+            <select name="city">
+                <option value="<%=city._id%>"><%= city.name %></option>
+            </select>
+                <br />
+            <label for="name">Name</label>
+                <br />
+            <input class="input" type="text" name="name" size="30" required>
+                <br />
+            <label for="location">Location</label>
+                <br />
+            <input class="input" type="text" name="location" size="30" required>
+                <br />
+            <label for="difficulty">Difficulty</label>
+                <br />
+            <select name="difficulty" required>
+                <option value="easy">Easy</option>
+                <option value="moderate">Moderate</option>
+                <option value="hard">Hard</option>
+            </select>
+                <br />
+            <label for="description">Description</label>
+                <br />
+                <br />
+            <textarea name="description" cols="30" rows="5" placeholder="Length of trail, good for running, family-friendly, etc.." required></textarea>
+                <br />
+            <label for="image">Image URL</label>
+                <br />
+            <input class="input" type="url" name="image" pattern="https://.*" size="30" required>
+                <br />
+            <button type="submit"><i class="fas fa-check"></i></button>
+            <a href="/cities/<%= city._id %>"><i class="fas fa-times"></i></a>
 
-        </form>
+            </form>
+        </div>
         </section>
     </main>
     <footer>
