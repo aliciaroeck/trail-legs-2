@@ -22,10 +22,11 @@
 
     </header>
     <main>
+        <h2>Hello, <%=user.username%></h2>
         <section>
             <h3>Your Trails</h3>
             <% userTrails.trails.forEach(trail => { %>
-                <div class="trail_name"><%=trail.name%></div>
+                <a href="/trails/<%=trail._id%>"><div class="trail"><p><%=trail.name%></p><p><%=trail.location%></p></div></a>
             <%console.log("trail", trail)%>
             <% }) %>
         </section>

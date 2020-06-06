@@ -21,7 +21,7 @@ header {
     font-Size: 20px;
     padding: 15px;
     padding-bottom: 50px;
-    background-image: url(/header/city-show.jpg);
+    background-image: url(/header/profile.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -82,7 +82,7 @@ footer{
     display: block;
 }
 
-.trail_name{
+.trail {
     background-color: var(--white);
     text-align: center;
     padding: 20px 250px;
@@ -91,6 +91,11 @@ footer{
     transition: transform .2s linear;
 }
 
-.trail_name:hover{
+a {
+    text-decoration: none;
+    color: var(--green);
+}
+
+.trail:hover{
     transform: scale(1.1);
 }
