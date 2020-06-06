@@ -19,8 +19,14 @@
                 <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
                 <a href="/cities/<%=trail.city._id%>" class="nav_link"><i class="fas fa-undo"></i> <%=trail.city.name%></a>
             </nav>
-
         </section>
+        <div class="user_login">
+            <a href="/profile" class="profile">Profile</a>
+                        
+            <form action="/logout?_method=DELETE" method="POST" class="logout">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
     </header>
     <main>
         <!-- trail -->

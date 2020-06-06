@@ -10,6 +10,7 @@
     --tan: #e0e0db;
     --black: #1f1f1f;
     --green: #404943;
+    --light-green: #5c6860;
 /* font  */
     --large-font: 'Raleway', Sans-Serif;
     --small-font: 'Open Sans', Sans-Serif;
@@ -80,6 +81,41 @@ footer{
 
 .trail_header{
     position: relative;
+}
+
+.user_login {
+    float: right;
+    font-size: 15px;
+    display: inline-flex;
+    margin-top: 170px;
+    margin-right: 20px;
+}
+
+.profile {
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--white);
+    transition: .3s;
+    margin-top: 1px;
+}
+
+.profile:hover {
+    color: var(--light-green);
+}
+
+.logout input:hover {
+    color: var(--light-green);
+    cursor: pointer;
+}
+
+.logout input{
+    text-decoration: none;
+    background-color: #1D1E22;
+    border: none;
+    color: var(--white);
+    font-size: 14px;
+    transition: .3s;
+    font-family: var(--small-font)
 }
 
 .trail_text{
