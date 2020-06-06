@@ -10,6 +10,7 @@
         --tan: #e0e0db;
         --black: #1f1f1f;
         --green: #404943;
+        --light-green: #5c6860;
     /* font  */
         --large-font: 'Raleway', Sans-Serif;
         --small-font: 'Open Sans', Sans-Serif;
@@ -101,7 +102,7 @@ footer{
     float: right;
     font-size: 15px;
     margin-top: 95px;
-    margin-right: 50px;
+    margin-right: 45px;
     font-weight: 900;
 }
 
@@ -124,10 +125,21 @@ footer{
 
 .profile {
     margin-right: 10px;
+    transition: .3s;
+}
+
+.profile:hover {
+    color: var(--light-green);
 }
 
 .logout {
     font-size: 15px;
+    transition: .3s;
+}
+
+.user_nav input:hover {
+    color: var(--light-green);
+    cursor: pointer;
 }
 
 .user_nav a {
@@ -145,6 +157,19 @@ footer{
 
 .register {
     margin-right: 15px;
+    transition: .3s;
+}
+
+.register:hover {
+    color: var(--light-green);
+}
+
+.login {
+    transition: .3s;
+}
+
+.login:hover {
+    color: var(--light-green);
 }
 
 .user a {
@@ -181,6 +206,7 @@ footer{
     text-decoration: none;
     display: block;
     text-align: left;
+    transition: .2s;
 }
 
 .select_city:hover {
