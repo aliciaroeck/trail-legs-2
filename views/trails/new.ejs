@@ -20,6 +20,13 @@
                 <a href="/cities/<%=city._id%>" class="nav_link"><i class="fas fa-undo"></i> <%=city.name%></a>
             </div>
         </div>
+        <div class="user_login">
+            <a href="/profile" class="profile">Profile</a>
+                        
+            <form action="/logout?_method=DELETE" method="POST" class="logout">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
     </header>
     <main>
         <h2>Create New Trail</h2>

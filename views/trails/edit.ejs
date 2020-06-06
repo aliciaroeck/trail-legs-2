@@ -14,11 +14,18 @@
         <h3> Trail Legs </h3>
         <div class="nav">
             <i class="fa fa-bars"></i>
-        <div class="nav_list">
-            <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
-            <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
-            <a href="/cities/<%=trail.city._id%>" class="nav_link"><i class="fas fa-undo"></i> <%=trail.city.name%></a>
+            <div class="nav_list">
+                <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
+                <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
+                <a href="/cities/<%=trail.city._id%>" class="nav_link"><i class="fas fa-undo"></i> <%=trail.city.name%></a>
+            </div>
         </div>
+        <div class="user_login">
+            <a href="/profile" class="profile">Profile</a>
+                        
+            <form action="/logout?_method=DELETE" method="POST" class="logout">
+                <input type="submit" value="Logout">
+            </form>
         </div>
     </header>
     <main>
