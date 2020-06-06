@@ -38,6 +38,7 @@ main {
     flex-direction: column;
     align-items: center;
     color: var(--green);
+    width: 100%;
 }
 
 footer{
@@ -94,6 +95,61 @@ footer{
 
 .nav:hover .nav_list {
     display: block;
+}
+
+.user_login {
+    float: right;
+    font-size: 15px;
+    margin-top: 95px;
+    margin-right: 50px;
+    font-weight: 900;
+}
+
+.greeting {
+    font-size: 20px;
+}
+
+.user_logout {
+    float: right;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-right: 40px;
+    font-weight: 900;
+}
+
+.user_nav {
+    float: right;
+    display: inline-flex;
+}
+
+.profile {
+    margin-right: 10px;
+}
+
+.logout {
+    font-size: 15px;
+}
+
+.user_nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.logout input{
+    text-decoration: none;
+    background-color: #1D1E22;
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+}
+
+.register {
+    margin-right: 15px;
+}
+
+.user a {
+    text-decoration: none;
+    color: var(--white);
 }
 
 /* drop down city navigation */

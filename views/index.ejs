@@ -26,6 +26,26 @@
             <h1>Your favorite Trails</h1>
             <h3>in one place</h3>
         </div>
+            <div class="user_login">
+                <% if (user) { %>
+                    <p class="greeting">Welcome, <%=user.username%></p>
+                    <div class="user_nav">
+                        <a href="/profile" class="profile">Profile</a>
+                        
+                        <form action="/logout?_method=DELETE" method="POST" class="logout">
+                            <input type="submit" value="Logout">
+                        </form>
+                    </div>
+            </div>       
+                    <% } else { %>
+                        <div class="user_logout">
+                            <div class="user">
+                                <a href="/register" class="register">Register</a>
+                                <a href="/login" class="login">Login</a>
+                            </div>
+                        </div>
+                <% } %>
+
     </section>
     <main>
         <!-- dropdown menu to select citiy -->
@@ -43,19 +63,6 @@
         <!-- about the app -->
         <section class="about_container">
         <div class="about">
-        <p>
-            <% if (user) { %>
-                Welcome, <%=user.username%>
-                <a href="/profile">Profile</a>
-                <form action="/logout?_method=DELETE" method="POST">
-                    <input type="submit" value="Logout">
-                </form>
-                
-                <% } else { %>
-                    <a href="/register">Register</a>
-                    <a href="/login">Login</a>
-                <% } %>
-            </p>
             
         <h3>About Us</h4>
         <article>
