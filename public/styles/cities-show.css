@@ -39,6 +39,7 @@ main {
     padding: 50px;
     padding-bottom: 200px;
     background-color: var(--tan);
+    width: 100%;
 }
 
 footer{
@@ -93,7 +94,7 @@ footer{
 .user_logout {
     float: right;
     font-size: 15px;
-    margin-top: 25px;
+    margin-top: 3px;
     margin-right: 40px;
     font-weight: 900;
 }
