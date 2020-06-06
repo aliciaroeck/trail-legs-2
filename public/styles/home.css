@@ -19,7 +19,7 @@
 /* main tag style */
 
 body {
-    background-color: var(--tan);
+    background-color: var(--white);
     color: var(--green);
 }
 
@@ -182,6 +182,7 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: var(--tan);
 }
 
 .select {
@@ -225,6 +226,11 @@ footer{
     align-items: center;
     margin: 50px 25px;
     padding: 140px;
+    width: 100%;
+}
+
+.text{
+    width: 500px;
 }
 
 .about_container {

@@ -180,10 +180,12 @@ footer{
     margin: 15px;
     font-size: 15px;
     transition: transform .2s linear;
+    color: var(--green);
 }
 
 .trail_name:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .trail_name a {

@@ -49,7 +49,7 @@
         </div>
         <section>
             <% city.trails.forEach(trail => { %> 
-                <div class="trail_name"><a href="/trails/<%= trail._id %>"><p class="name"><%= trail.name %></p><p class="location"><%=trail.city%></p></a></div>
+                <a href="/trails/<%= trail._id %>"></a><div class="trail_name"><p class="name"><%= trail.name %></p><p class="location"><%=trail.location%></p></div></a>
                 <% }); %>
             <% if(city.trails.length === 0){ %>
                 <p>No trails have been added.</p>
