@@ -64,6 +64,18 @@ footer{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
 }
 
+.fa-home {
+    color: var(--green);
+}
+
+.fa-globe-americas {
+    color: var(--green);
+}
+
+.fa-bars {
+    color: var(--white);
+}
+
 .nav_link {
     float: none;
     color: var(--green);
@@ -96,6 +108,71 @@ a {
     color: var(--green);
 }
 
+h2 {
+    color: var(--green);
+}
+
+section {
+    color: var(--green)
+}
+
 .trail:hover{
     transform: scale(1.1);
+}
+
+/* footer */
+p.social {
+    float: right;
+    font-size: 20px;
+}
+
+.copyright {
+    margin-top: 8px;
+    margin-left: 60px;
+}
+
+.social {
+    margin: 5px;
+    position: relative;
+}
+
+.fa-instagram {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-facebook-f {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-twitter{
+    transition: .3s;
+}
+
+i.fa-instagram {
+    text-decoration: none;
+    color: var(--white);
+}
+
+i.fa-facebook-f {
+    text-decoration: none;
+    color: var(--white);
+}
+
+i.fa-twitter {
+    text-decoration: none;
+    color: var(--white);
+}
+
+i.fa-instagram:hover {
+    color: var(--light-green);
+}
+
+i.fa-facebook-f:hover {
+    color: var(--light-green);
+}
+
+i.fa-twitter:hover {
+    color: var(--light-green);
 }

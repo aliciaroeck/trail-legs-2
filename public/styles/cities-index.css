@@ -195,3 +195,44 @@ footer{
     display: inline-block;
     background-size: cover;
 };
+
+/* footer */
+p.social {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.copyright {
+
+}
+
+.fa-instagram {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-facebook-f {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-twitter{
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+i.fa-instagram:hover {
+    color: var(--light-green);
+}
+
+i.fa-facebook-f:hover {
+    color: var(--light-green);
+}
+
+i.fa-twitter:hover {
+    color: var(--light-green);
+}

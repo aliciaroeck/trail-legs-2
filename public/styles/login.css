@@ -116,3 +116,41 @@ a:link, a:visited, .home:visited {
 .register:hover {
     text-decoration: underline;
 }
+
+p.social {
+    float: right;
+    font-size: 20px;
+}
+
+.copyright {
+    margin-top: 8px;
+    margin-left: 60px;
+}
+
+.social {
+    margin: 5px;
+    position: relative;
+}
+
+.fa-instagram {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-facebook-f {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-twitter{
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a i:hover{
+    color: var(--light-green)
+}
