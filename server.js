@@ -55,7 +55,6 @@ app.get("/", (req,res) => {
             console.log(err);
             return res.send({message: "Internal Server Error"});
           } else {
-            console.log(req.session);
             const context = 
             {cities: allCities,
             user: req.session.currentUser};

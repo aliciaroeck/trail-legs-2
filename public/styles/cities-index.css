@@ -49,9 +49,12 @@ h2{
 
 footer{
     background-color: var(--green);
-    text-align: center;
     padding: 20px;
-    color: var(--white)
+    color: var(--white);
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 /* navigation menu */
@@ -197,12 +200,19 @@ footer{
 };
 
 /* footer */
-p.social {
+.social {
     font-size: 20px;
     margin: 5px;
 }
 
 .copyright {
+    text-align: center;
+    margin-right: 560px;
+}
+
+.social_icons {
+    text-align: right;
+    font-size: 20px;
 
 }
 
@@ -218,6 +228,7 @@ p.social {
 
 .fa-twitter{
     transition: .3s;
+    margin-right: 20px;
 }
 
 a {
