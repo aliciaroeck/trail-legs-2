@@ -135,6 +135,7 @@ footer{
 }
 
 .logout {
+    background-color: rgba(0,0,0,0);
     font-size: 15px;
     transition: .3s;
 }
@@ -150,8 +151,9 @@ footer{
 }
 
 .logout input{
+    font-family: var(--large-font);
     text-decoration: none;
-    background-color: #1D1E22;
+    background-color: rgba(0,0,0,0);
     border: none;
     color: var(--white);
     font-size: 15px;

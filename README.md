@@ -1,4 +1,4 @@
-# Project-One
+# Trail Legs
 
 <b>Minimum Viable Product (MVP)</b>
 We are building a user-friendly hiking trail application where you will be able to view trails in major cities. The user will be able to select the city, then a list of trails will populate. The user will be able to click into those trails to read a bit more about it and other users who have walked the trails. The user will be able to create and delete trails.
