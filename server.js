@@ -46,8 +46,8 @@ const authRequired = function (req, res, next) {
   }
   next();
 };
-/* Routes */
 
+/* Routes */
 // root routes
 app.get("/", (req,res) => {
     db.City.find({}, (err, allCities) => {
