@@ -113,7 +113,8 @@ footer {
 
 .logout input{
     text-decoration: none;
-    background-color: rgba(241, 241, 241,.01);
+    font-family: var(--large-font);
+    background-color: rgba(0,0,0,0);
     border: none;
     color: var(--white);
     font-size: 14px;

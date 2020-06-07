@@ -110,7 +110,7 @@ button:hover {
 }
 
 .home {
-    display: flex;
+    /* display: flex; */
     padding: 15px;
     color: var(--tan);
     font-size: 30px;

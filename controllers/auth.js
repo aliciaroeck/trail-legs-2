@@ -12,9 +12,37 @@ router.get("/register", (req,res) => {
 // register post route
 router.post("/register", async (req,res) => {
     try {
+        const foundEmail = await db.User.findOne({email: req.body.email});
+        if(foundEmail) {
+            return res.redirect("/register/new");
+        }
+        const foundUser = await db.User.findOne({username: req.body.username});
+        if(foundUser) {
+            return res.redirect("/register/new");
+        }
+        const salt = await bcrypt.genSalt(10);
+        const hash = await bcrypt.hash(req.body.password, salt);
+        req.body.password = hash;
+        const newUser = await db.User.create(req.body);
+        res.redirect("/login");
+        console.log(newUser);
+    } catch (err) {
+        console.log(err);
+        res.send({err});
+    }
+});
+
+// register route (user email already exists)
+router.get("/register/new", (req,res) => {
+    res.render("auth/register-new");
+});
+
+// register post route (for an incorrect account)
+router.post("/register/new", async (req,res) => {
+    try {
         const foundUser = await db.User.findOne({email: req.body.email});
         if(foundUser) {
-            return res.send({message: "Account already registered"});
+            return res.redirect("/register/new");
         } 
         const salt = await bcrypt.genSalt(10);
         const hash = await bcrypt.hash(req.body.password, salt);
@@ -38,11 +66,38 @@ router.post("/login", async (req,res) => {
     try {
         const foundUser = await db.User.findOne({username: req.body.username});
         if(!foundUser) {
-            return res.send({message: "Password or Email is Incorrect"});
+            return res.redirect("/login/new");
         }
         const match = await bcrypt.compare(req.body.password, foundUser.password);
         if (!match) {
-            return res.send({message: "Password or Email is Incorrect"});
+            return res.redirect("/login/new");
+        }
+        req.session.currentUser = {
+            id: foundUser._id,
+            username: foundUser.username,
+        }
+        res.redirect("/");
+    } catch (err) {
+        console.log(err);
+        res.send({message: "Internal Server Error"});
+    }
+});
+
+// login new route (incorrect username or password)
+router.get("/login/new", (req,res) => {
+    res.render("auth/login-new");
+});
+
+// login post route
+router.post("/login/new", async (req,res) => {
+    try {
+        const foundUser = await db.User.findOne({username: req.body.username});
+        if(!foundUser) {
+            return res.redirect("/login/new");
+        }
+        const match = await bcrypt.compare(req.body.password, foundUser.password);
+        if (!match) {
+            return res.redirect("/login/new");
         }
         req.session.currentUser = {
             id: foundUser._id,

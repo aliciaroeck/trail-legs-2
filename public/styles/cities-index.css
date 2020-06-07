@@ -137,8 +137,9 @@ footer{
 }
 
 .logout input{
+    font-family: var(--large-font);
+    background-color: rgba(0,0,0,0);
     text-decoration: none;
-    background-color: #1D1E22;
     border: none;
     color: var(--white);
     font-size: 15px;
