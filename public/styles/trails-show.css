@@ -10,6 +10,7 @@
     --tan: #e0e0db;
     --black: #1f1f1f;
     --green: #404943;
+    --light-green: #5c6860;
 /* font  */
     --large-font: 'Raleway', Sans-Serif;
     --small-font: 'Open Sans', Sans-Serif;
@@ -44,6 +45,11 @@ footer{
     text-align: center;
     padding: 20px;
     color: var(--white)
+}
+
+a {
+    text-decoration: none;
+    color: var(--green);
 }
 
 .nav {
@@ -82,6 +88,43 @@ footer{
     position: relative;
 }
 
+/* user auth nav */
+.user_login {
+    float: right;
+    font-size: 15px;
+    display: inline-flex;
+    margin-top: 170px;
+    margin-right: 20px;
+}
+
+.profile {
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--white);
+    transition: .3s;
+    margin-top: 1px;
+}
+
+.profile:hover {
+    color: var(--light-green);
+}
+
+.logout input:hover {
+    color: var(--light-green);
+    cursor: pointer;
+}
+
+.logout input{
+    text-decoration: none;
+    background-color: #1D1E22;
+    border: none;
+    color: var(--white);
+    font-size: 14px;
+    transition: .3s;
+    font-family: var(--small-font)
+}
+
+/* main text */
 .trail_text{
     position: absolute;
     top: 0;
@@ -108,6 +151,108 @@ footer{
 .icons{
     float: right;
     display: inline-flex;
+}
+
+.description {
+    background-color: var(--white);
+    color: var(--green);
+    padding-top: 20px;
+}
+
+.text {
+    padding-bottom: 40px;
+    width: 700px;
+    padding-top: 15px;
 
 }
 
+.creator {
+    padding: 15px;
+    font-weight: 900;
+}
+
+.icons {
+    color: var(--green);
+    font-size: 15px;
+    padding: 10px;
+    transition: .3s;
+}
+
+button  {
+    text-decoration: none;
+    border: none;
+    font-size: 15px;
+    color: var(--green);
+    background-color: var(--tan);
+    transition: .3s;
+}
+
+button:hover {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.icons a:hover {
+    color: var(--white);
+}
+
+.delete {
+    margin-right: 10px;
+}
+
+/* footer */
+p.social {
+    float: right;
+    font-size: 20px;
+}
+
+.copyright {
+    margin-top: 8px;
+    margin-left: 60px;
+}
+
+.social {
+    margin: 5px;
+    position: relative;
+}
+
+.fa-instagram {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-facebook-f {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-twitter{
+    transition: .3s;
+}
+
+i.fa-instagram {
+    text-decoration: none;
+    color: var(--white);
+}
+
+i.fa-facebook-f {
+    text-decoration: none;
+    color: var(--white);
+}
+
+i.fa-twitter {
+    text-decoration: none;
+    color: var(--white);
+}
+
+i.fa-instagram:hover {
+    color: var(--light-green);
+}
+
+i.fa-facebook-f:hover {
+    color: var(--light-green);
+}
+
+i.fa-twitter:hover {
+    color: var(--light-green);
+}

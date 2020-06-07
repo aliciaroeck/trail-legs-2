@@ -26,6 +26,26 @@
             <h1>Your favorite Trails</h1>
             <h3>in one place</h3>
         </div>
+            <div class="user_login">
+                <% if (user) { %>
+                    <p class="greeting">Welcome, <%=user.username%></p>
+                    <div class="user_nav">
+                        <a href="/profile" class="profile">Profile</a>
+                        
+                        <form action="/logout?_method=DELETE" method="POST" class="logout">
+                            <input type="submit" value="Logout">
+                        </form>
+                    </div>
+            </div>       
+                    <% } else { %>
+                        <div class="user_logout">
+                            <div class="user">
+                                <a href="/register" class="register">Register</a>
+                                <a href="/login" class="login">Login</a>
+                            </div>
+                        </div>
+                <% } %>
+
     </section>
     <main>
         <!-- dropdown menu to select citiy -->
@@ -41,31 +61,23 @@
         </section>
 
         <!-- about the app -->
-        <section class="about_container">
+        <p class="about_container">
         <div class="about">
-        <p>
-            <% if (user) { %>
-                Welcome, <%=user.username%>
-                <a href="/profile">Profile</a>
-                <form action="/logout?_method=DELETE" method="POST">
-                    <input type="submit" value="Logout">
-                </form>
-                
-                <% } else { %>
-                    <a href="/register">Register</a>
-                    <a href="/login">Login</a>
-                <% } %>
-            </p>
             
-        <h3>About Us</h4>
-        <article>
+        <h4 class="about-us">About Us</h4>
+        <article class="text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestiae aliquam deserunt tenetur sapiente odit voluptatem itaque aliquid placeat a harum esse sit laborum possimus consequuntur, dicta est at rem.
         </article>
         </div>
-        </section>
+        </p>
     </main>
     <footer>
-        <p>Copyright</p>
+        
+        <p class="social"><a href="#"><i class="fab fa-instagram"></i></a>  <a href=""><i class="fab fa-facebook-f"></i></a> <a href=""><i class="fab fa-twitter"></i></a>
+
+        </p>
+        <p class="copyright">Copyright</p>
     </footer>
+
 </body>
 </html>

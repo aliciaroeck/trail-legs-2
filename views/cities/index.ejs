@@ -19,6 +19,24 @@
             <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
         </div>
       </div>
+      <div class="user_login">
+        <% if (user) { %>
+            <div class="user_nav">
+                <a href="/profile" class="profile">Profile</a>
+                
+                <form action="/logout?_method=DELETE" method="POST" class="logout">
+                    <input type="submit" value="Logout">
+                </form>
+            </div>
+    </div>       
+            <% } else { %>
+                <div class="user_logout">
+                    <div class="user">
+                        <a href="/register" class="register">Register</a>
+                        <a href="/login" class="login">Login</a>
+                    </div>
+                </div>
+        <% } %>
   </header>
   <main>
     <!-- Loop through cities -->
@@ -37,7 +55,10 @@
     <!-- second loop to add images -->
   </main>
   <footer>
-      <p>Copyright</p>
-  </footer>
+    <p class="social">
+      <p class="copyright">Copyright</p>
+      <p class="social_icons"><a href="#"><i class="fab fa-instagram"></i></a>  <a href=""><i class="fab fa-facebook-f"></i></a> <a href=""><i class="fab fa-twitter"></i></a></p>
+    </p>
+</footer>
 </body>
 </html>
