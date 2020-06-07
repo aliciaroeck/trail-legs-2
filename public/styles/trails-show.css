@@ -201,6 +201,10 @@ button:hover {
     margin-right: 10px;
 }
 
+.edit {
+    transition: .3s;
+}
+
 /* footer */
 p.social {
     float: right;

@@ -17,37 +17,37 @@
         <section class="content">
             <p><a class="home" href="/"><i class="fas fa-home"></i></a></p>
             <main>
-            <h1>Sign Up for Trail Legs</h1>
-            <div>
-                <p class="error"><i class="fas fa-times"></i>
+                <h1>Sign Up for Trail Legs</h1>
+                <div>
+                    <p class="error"><i class="fas fa-times"></i>
+                    Another account is using the email entered.
+                    </p>
+                </div>
+                <div class="form">
+                <form action="/register" method="POST">
+                    <label for="email">Email</label>
+                        <br />
+                    <input class="input" type="email" name="email" required>
+                        <br />
+                    <label for="username">Username</label>
+                        <br />
+                    <input class="input" type="text" name="username" required>
+                        <br />
+                    <label for="password">Password</label>
+                        <br />
+                    <input class="input" type="password" name="password" required>
+                        <br />
+                    <button type="submit"><i class="fas fa-check"></i></button>
+                </form>
 
-                Another account is using the email entered.</p>
-            </div>
-            <div class="form">
-            <form action="/register" method="POST">
-                <label for="email">Email</label>
-                    <br />
-                <input class="input" type="email" name="email" required>
-                    <br />
-                <label for="username">Username</label>
-                    <br />
-                <input class="input" type="text" name="username" required>
-                    <br />
-                <label for="password">Password</label>
-                    <br />
-                <input class="input" type="password" name="password" required>
-                    <br />
-                <button type="submit"><i class="fas fa-check"></i></button>
-            </form>
-
-            <p class="login">
-                <a class="login" href="/login">
-                    Already a member? Sign In
-                </a>
-            </p>
-            
-            </div>
-        </main>
+                <p class="login">
+                    <a class="login" href="/login">
+                        Already a member? Sign In
+                    </a>
+                </p>
+                
+                </div>
+            </main>
         </section>
     </div>
 </body>
