@@ -5,6 +5,7 @@ We are building a user-friendly hiking trail application where you will be able 
 
 ## Wireframes
 **Home Page**
+
 ![home wireframe](./images/planning/wireframes/home.png)
 
 **Register Page**
