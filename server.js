@@ -5,6 +5,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const db = require("./models");
+require("dotenv").config();
 
 /* Internal Modules */
 const controllers = require("./controllers");
@@ -13,7 +14,7 @@ const controllers = require("./controllers");
 const app = express();
 
 /* Configuration Variables */
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
 /* App Configuration */
 app.set("view engine", "ejs");
@@ -25,9 +26,9 @@ app.use(
   session({
     // store session info into db
     store: new MongoStore({
-      url: process.env.MONGODB_URI || "mongodb://localhost:27017/trail-legs",
+      url: process.env.MONGODB_URI
     }),
-    secret: process.env.SECRET_KEY || "dallas nashville",
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: false,
     cookie: {
