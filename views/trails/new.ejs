@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/new.css">
+    <title>Create Trail</title>
+</head>
+<body>
+    <header>
+        <!-- navigation and app name -->
+        <h3> Trail Legs </h3>
+        <div class="nav">
+            <i class="fa fa-bars"></i>
+            <div class="nav_list">
+                <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
+                <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
+                <a href="/cities/<%=city._id%>" class="nav_link"><i class="fas fa-undo"></i> <%=city.name%></a>
+            </div>
+        </div>
+        <div class="user_login">
+            <a href="/profile" class="profile">Profile</a>
+                        
+            <form action="/logout?_method=DELETE" method="POST" class="logout">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
+    </header>
+    <main>
+        <h2>Create New Trail</h2>
+        
+        <section class="main_content">
+        
+        <div class="form">
+            <form action="/trails/<%= city._id %>" method="POST">
+
+        <!-- dropdown menu of all cities -->
+            <label for="city">City</label>
+                <br />
+            <select name="city">
+                <option value="<%=city._id%>"><%= city.name %></option>
+            </select>
+                <br />
+            <label for="name">Name</label>
+                <br />
+            <input class="input" type="text" name="name" size="30" required>
+                <br />
+            <label for="location">Location</label>
+                <br />
+            <input class="input" type="text" name="location" size="30" required>
+                <br />
+            <label for="difficulty">Difficulty</label>
+                <br />
+            <select name="difficulty" required>
+                <option value="easy">Easy</option>
+                <option value="moderate">Moderate</option>
+                <option value="difficult"></option>
+            </select>
+                <br />
+            <label for="description">Description</label>
+                <br />
+                <br />
+            <textarea name="description" cols="30" rows="5" placeholder="Length of trail, good for running, family-friendly, etc.." required></textarea>
+                <br />
+            <label for="image">Image URL</label>
+                <br />
+            <input class="input" type="url" name="image" pattern="https://.*" size="30" required>
+                <br />
+            <button type="submit"><i class="fas fa-check"></i></button>
+            <a href="/cities/<%= city._id %>"><i class="fas fa-times"></i></a>
+
+            </form>
+        </div>
+        </section>
+    </main>
+    <footer>
+        
+        <p class="social"><a href="#"><i class="fab fa-instagram"></i></a>  <a href=""><i class="fab fa-facebook-f"></i></a> <a href=""><i class="fab fa-twitter"></i></a>
+    
+        </p>
+        <p class="copyright">Copyright</p>
+    </footer>
+</body>
+</html>

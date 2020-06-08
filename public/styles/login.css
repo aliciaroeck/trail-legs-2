@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*  colors  */
+        --white: #f1f1f1;
+        --tan: #e0e0db;
+        --black: #1f1f1f;
+        --green: #404943;
+    /* font  */
+        --large-font: 'Raleway', Sans-Serif;
+        --small-font: 'Open Sans', Sans-Serif;
+}
+
+label {
+    color: var(--green);
+    opacity: 1;
+}
+
+button {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--green);
+    transition: .3s;
+    padding: 2px;
+    outline: none;
+}
+
+body {
+    background-color: #EBE0C8;
+    height: 100vh;
+}
+
+footer{
+    background-color: var(--green);
+    text-align: center;
+    padding: 20px;
+    color: var(--white);
+    position: absolute;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.auth-sidebar {
+    background-image: url(/reglogin/login.jpg);
+    background-size: 720px 800px;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50%
+}
+
+.content {
+    font-Family: 'Raleway', Sans-Serif;
+    color: var(--tan);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green);
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.error {
+    padding: 10px;
+    background-color: rgba(185, 74, 72, .9);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--tan);
+    margin: 25px;
+    padding: 50px;
+    border-radius: 20px;
+    Font-Family: 'Open Sans', Sans-Serif;
+    color: var(--green);
+}
+
+.input {
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    outline: none;
+    border-bottom: 2px solid var(--green);
+    background-color: rgba(0,0,0,0);
+    color: var(--green);
+    font-size: 14px;
+}
+
+button:hover {
+    transform: scale(1.3);
+}
+
+.home {
+    display: flex;
+    padding: 15px;
+    color: var(--tan);
+    font-size: 30px;
+    width: 25px;
+}
+
+.register {
+    padding-top: 20px;
+    font-size: 14px;
+    color: var(--green);
+}
+
+a:link, a:visited, .home:visited {
+    text-decoration: none;
+}
+
+.register:hover {
+    text-decoration: underline;
+}

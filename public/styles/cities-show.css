@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*  colors  */
+        --white: #f1f1f1;
+        --tan: #e0e0db;
+        --black: #1f1f1f;
+        --green: #404943;
+        --light-green: #5c6860;
+    /* font  */
+        --large-font: 'Raleway', Sans-Serif;
+        --small-font: 'Open Sans', Sans-Serif;
+}
+
+header {
+    font-Family: var(--large-font);
+    font-Size: 20px;
+    padding: 15px;
+    padding-bottom: 50px;
+    background-image: url(/header/city-show.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+    color: var(--white);
+}
+
+main {
+    Font-Family: var(--small-font);
+    Font-Size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 200px;
+    background-color: var(--tan);
+    width: 100%;
+}
+
+footer{
+    background-color: var(--green);
+    text-align: center;
+    padding: 20px;
+    color: var(--white)
+}
+
+/* navigation menu */
+.nav {
+    overflow: hidden;
+    width: 25px;
+    margin: 5px;
+}
+
+.nav_list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+}
+
+.nav_link {
+    float: none;
+    color: var(--green);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+.nav_link:hover {
+    background-color: lightgray;
+}
+
+.nav:hover .nav_list {
+    display: block;
+}
+
+/* user auth navigation */
+.user_login {
+    float: right;
+    font-size: 15px;
+    margin-top: 170px;
+    margin-right: 35px;
+    font-weight: 900;
+}
+
+.user_logout {
+    float: right;
+    font-size: 15px;
+    margin-top: 3px;
+    margin-right: 25px;
+    font-weight: 900;
+}
+
+.user_nav {
+    float: right;
+    display: inline-flex;
+}
+
+.profile {
+    margin-left: 400px;
+    transition: .3s;
+}
+
+.profile:hover {
+    color: var(--light-green);
+}
+
+.logout {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.user_nav input:hover {
+    color: var(--light-green);
+    cursor: pointer;
+}
+
+.user_nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.logout input{
+    text-decoration: none;
+    font-family: var(--large-font);
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+    transition: .3s;
+}
+
+.register {
+    margin-right: 15px;
+    transition: .3s;
+}
+
+.register:hover {
+    color: var(--light-green);
+}
+
+.login {
+    transition: .3s;
+}
+
+.login:hover {
+    color: var(--light-green);
+}
+
+.user a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* trail main */
+.trail_title {
+    margin-bottom: 80px;
+    color: var(--green)
+}
+
+.trail_location {
+    font-size: 40px;
+}
+
+.trails {
+    text-align: center;
+}
+
+.trail_name{
+    background-color: var(--white);
+    text-align: center;
+    padding: 20px 250px;
+    margin: 15px;
+    font-size: 15px;
+    transition: transform .2s linear;
+    color: var(--green);
+}
+
+.trail_name:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.trail_name a {
+    text-decoration: none;
+    color: var(--green);
+}
+
+.name{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+button{
+    text-decoration: none;
+    border: none;
+    background-color: var(--tan);
+    font-size: 20px;
+    color: var(--green);
+    transition: .3s;
+}
+
+button:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
+form{
+    margin-left: 600px;
+}
+
+p.social {
+    float: right;
+    font-size: 20px;
+}
+
+.copyright {
+    margin-top: 8px;
+    margin-left: 60px;
+}
+
+.social {
+    margin: 5px;
+    position: relative;
+}
+
+.fa-instagram {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-facebook-f {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-twitter{
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a i:hover{
+    color: var(--light-green)
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/cities-show.css">
+    <title><%=city.name%> Trails</title>
+</head>
+<body>
+    <header>
+
+        <!-- navigation and app name -->
+        <h3> Trail Legs </h3>
+        <section class="nav">
+            <i class="fa fa-bars"></i>
+            <nav class="nav_list">
+                <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
+                <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
+            </nav>
+        </section>
+        <div class="user_login">
+            <% if (user) { %>
+                <div class="user_nav">
+                    <a href="/profile" class="profile">Profile</a>
+                    
+                    <form action="/logout?_method=DELETE" method="POST" class="logout">
+                        <input type="submit" value="Logout">
+                    </form>
+                </div>
+        </div>       
+                <% } else { %>
+                    <div class="user_logout">
+                        <div class="user">
+                            <a href="/register" class="register">Register</a>
+                            <a href="/login" class="login">Login</a>
+                        </div>
+                    </div>
+            <% } %>
+    </header>
+    <main>
+        <!-- displays city, state -->
+        <div class="trail_title">
+        <h3 class="trail_location"><%=city.name%>, <%=city.state%></h3>
+
+        <!-- lists trails in city -->
+        <h2 class="trails">Trails</h2>
+        </div>
+        <section>
+            <% city.trails.forEach(trail => { %> 
+                <a href="/trails/<%= trail._id %>">
+                    <div class="trail_name">
+                        <p class="name"><%= trail.name %></p>
+                        <p class="location"><%=trail.location%></p>
+                    </div>
+                </a>
+                <% }); %>
+            <% if(city.trails.length === 0){ %>
+                <p>No trails have been added.</p>
+                <% }; %>
+        </section>
+
+        <!-- create new trail icon -->
+        <div class="new">
+            <form action="/trails/<%=city._id%>/new" method="get">
+                <button>
+                    <i class="fa fa-plus-circle"></i>
+                </button>
+            </form>
+        </div>
+        
+    </main>
+    <footer>
+        
+        <p class="social"><a href="#"><i class="fab fa-instagram"></i></a>  <a href=""><i class="fab fa-facebook-f"></i></a> <a href=""><i class="fab fa-twitter"></i></a>
+    
+        </p>
+        <p class="copyright">Copyright</p>
+    </footer>
+</body>
+</html>

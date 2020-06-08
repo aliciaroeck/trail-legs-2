@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/trails-show.css">
+    <title>View <%=trail.name%></title>
+</head>
+<body>
+    <header>
+        <h3> Trail Legs </h3>
+        <!-- navigation and app name -->
+        <section class="nav">
+            <i class="fa fa-bars"></i>
+            <nav class="nav_list">
+                <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
+                <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
+                <a href="/cities/<%=trail.city._id%>" class="nav_link"><i class="fas fa-undo"></i> <%=trail.city.name%></a>
+            </nav>
+        </section>
+        <div class="user_login">
+            <a href="/profile" class="profile">Profile</a>
+                        
+            <form action="/logout?_method=DELETE" method="POST" class="logout">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
+    </header>
+    <main>
+        <!-- trail -->
+        <div class="trail_header">
+            <div class="trail_text">
+                    <h2><%=trail.name%></h2>
+                    <h4><%=trail.location%> - <%=trail.city.name%>, <%=trail.city.state%></h4>
+            </div>
+            <div class="trail_img">
+                <style>
+                    .trail_img {
+                        background-image: url(<%=trail.image%>);
+                    };
+                </style>
+            </div>
+        <div class="trail_info">
+            <div class="description">
+                <h2 class="title">Description:</h2>
+                <p class="text"><%=trail.description%> </p>
+                <p class="creator">Created by <%=trail.user.username%></p>
+            </div>
+            
+            <% if(currentUser === trail.user._id.toString()) {%>
+            <div class="icons">
+                <!-- delete icon -->
+                <form action="/trails/<%=trail._id%>?_method=DELETE" method="POST">
+                <button class="delete"><i class="fa fa-trash"></i></button>
+                </form>
+                <!-- edit icon -->
+                <a href="/trails/<%=trail._id%>/edit" class="edit"><i class="fas fa-pen"></i></a>
+            </div>
+            <%}%>
+        </div>
+
+    
+    </main>
+    <footer>
+        <p class="social"><a href="#"><i class="fab fa-instagram"></i></a>  <a href=""><i class="fab fa-facebook-f"></i></a> <a href=""><i class="fab fa-twitter"></i></a>
+
+        </p>
+        <p class="copyright">Copyright</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <title>Trail Legs</title>
+</head>
+<body>
+    <section class="header-slogan">
+    <header>
+        <h3> Trail Legs </h3>
+        <!-- navigation and app name -->
+        <div class="nav">
+            <i class="fa fa-bars"></i>
+            <div class="nav_list">
+                <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
+                <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
+            </div>
+        </div>
+    </header>
+        <!-- trail legs slogan -->
+        <div class="slogan">
+            <h1>Your favorite Trails</h1>
+            <h3>in one place</h3>
+        </div>
+            <div class="user_login">
+                <% if (user) { %>
+                    <p class="greeting">Welcome, <%=user.username%></p>
+                    <div class="user_nav">
+                        <a href="/profile" class="profile">Profile</a>
+                        
+                        <form action="/logout?_method=DELETE" method="POST" class="logout">
+                            <input type="submit" value="Logout">
+                        </form>
+                    </div>
+            </div>       
+                    <% } else { %>
+                        <div class="user_logout">
+                            <div class="user">
+                                <a href="/register" class="register">Register</a>
+                                <a href="/login" class="login">Login</a>
+                            </div>
+                        </div>
+                <% } %>
+
+    </section>
+    <main>
+        <!-- dropdown menu to select citiy -->
+        <section class="select_container">
+        <div class="select">
+            <h2 class="select_dropdown">Find Your City <i class="fa fa-angle-down"></i></h2>
+            <div class="select_list">
+                    <% cities.forEach(city => { %>
+                            <a href="/cities/<%=city._id%>" class="select_city"><%=city.name%></a>
+                    <% }) %>
+            </div>
+        </div>
+        </section>
+
+        <!-- about the app -->
+        <p class="about_container">
+        <div class="about">
+            
+        <h4 class="about-us">About Us</h4>
+        <article class="text">
+            Trail Legs has built an easy to use database for users to store their favorite trails. Starting with eight major cities Trail Legs helps users store and explore a collection of trails in each city. <br>
+            <br>
+            Trail Legs was founded by Christian Hutto and Alicia Roeck from their shared love of hiking. What if you could have all of your favorite trails in one place? Trail Legs was built to help friends, loved ones, and outdoor enthusiasts share their favorite trails.
+        </article>
+        </div>
+        </p>
+    </main>
+    <footer>
+        
+        <p class="social"><a href="#"><i class="fab fa-instagram"></i></a>  <a href=""><i class="fab fa-facebook-f"></i></a> <a href=""><i class="fab fa-twitter"></i></a>
+
+        </p>
+        <p class="copyright">Copyright</p>
+    </footer>
+
+</body>
+</html>

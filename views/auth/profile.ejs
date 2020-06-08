@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <title>Profile</title>
+</head>
+<body>
+    <header>
+        <!-- navigation and app name -->
+        <h3> Trail Legs </h3>
+        <section class="nav">
+            <i class="fa fa-bars"></i>
+            <nav class="nav_list">
+                <a href="/" class="nav_link"><i class="fas fa-home"></i> Home</a>
+                <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
+            </nav>
+        </section>
+        <form action="/logout?_method=DELETE" method="POST" class="logout">
+            <input type="submit" value="Logout">
+        </form>
+    </header>
+    <main>
+        <h2>Hello, <%=user.username%></h2>
+        <section>
+            <h3>Your Trails</h3>
+            <% userTrails.trails.forEach(trail => { %>
+                <a href="/trails/<%=trail._id%>"><div class="trail"><p><%=trail.name%></p><p><%=trail.location%></p></div></a>
+            <%console.log("trail", trail)%>
+            <% }) %>
+        </section>
+    </main>
+    <footer>
+        
+        <p class="social"><a href="#"><i class="fab fa-instagram"></i></a>  <a href=""><i class="fab fa-facebook-f"></i></a> <a href=""><i class="fab fa-twitter"></i></a>
+    
+        </p>
+        <p class="copyright">Copyright</p>
+    </footer>
+</body>
+</html>

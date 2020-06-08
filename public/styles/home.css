@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*  colors  */
+        --white: #f1f1f1;
+        --tan: #e0e0db;
+        --black: #1f1f1f;
+        --green: #404943;
+        --light-green: #5c6860;
+    /* font  */
+        --large-font: 'Raleway', Sans-Serif;
+        --small-font: 'Open Sans', Sans-Serif;
+}
+
+/* main tag style */
+
+body {
+    background-color: var(--white);
+    color: var(--green);
+}
+
+header {
+    font-Family: 'Raleway', Sans-Serif;
+    font-Size: 20px;
+    padding: 15px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+}
+
+main {
+    Font-Family: 'Open Sans', Sans-Serif;
+    Font-Size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--green);
+    width: 100%;
+}
+
+footer{
+    background-color: var(--green);
+    text-align: center;
+    padding: 20px;
+    color: var(--white);
+    position: absolute;
+    width: 100%;
+}
+
+/* header styling */
+.header-slogan {
+    font-Family: 'Raleway', Sans-Serif;
+    background-image: url(/header/home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+    padding-bottom: 150px;
+    font-size: 40px;
+}
+
+.slogan {
+    text-align: center;
+}
+
+/* drop down navigation */
+.nav {
+    overflow: hidden;
+    width: 25px;
+    margin: 5px;
+}
+
+.nav_list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    
+}
+
+.nav_link {
+    float: none;
+    color: var(--green);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+.nav_link:hover {
+    background-color: lightgray;
+}
+
+.nav:hover .nav_list {
+    display: block;
+}
+
+.user_login {
+    float: right;
+    font-size: 15px;
+    margin-top: 95px;
+    margin-right: 35px;
+    font-weight: 900;
+}
+
+.greeting {
+    font-size: 20px;
+}
+
+.user_logout {
+    float: right;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-right: 30px;
+    font-weight: 900;
+}
+
+.user_nav {
+    float: right;
+    display: inline-flex;
+}
+
+.profile {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.profile:hover {
+    color: var(--light-green);
+}
+
+.logout {
+    background-color: rgba(0,0,0,0);
+    font-size: 15px;
+    transition: .3s;
+}
+
+.user_nav input:hover {
+    color: var(--light-green);
+    cursor: pointer;
+}
+
+.user_nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.logout input{
+    font-family: var(--large-font);
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+    transition: .3s;
+}
+
+.register {
+    margin-right: 15px;
+    transition: .3s;
+}
+
+.register:hover {
+    color: var(--light-green);
+}
+
+.login {
+    transition: .3s;
+}
+
+.login:hover {
+    color: var(--light-green);
+}
+
+.user a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* drop down city navigation */
+.select_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--tan);
+}
+
+.select {
+    overflow: hidden;
+    width: 175px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.select_list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.select_city {
+    float: none;
+    color: var(--green);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: .2s;
+}
+
+.select_city:hover {
+    background-color: lightgray;
+}
+
+.select:hover .select_list {
+    display: block;
+}
+
+/* main class styling */
+.about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 25px;
+    padding: 140px;
+    width: 100%;
+}
+
+.about-us{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.text{
+    width: 500px;
+}
+
+.about_container {
+    background-color: var(--white);
+}
+
+p.social {
+    float: right;
+    font-size: 20px;
+}
+
+.copyright {
+    margin-top: 8px;
+    margin-left: 60px;
+}
+
+.social {
+    margin: 5px;
+    position: relative;
+}
+
+.fa-instagram {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-facebook-f {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.fa-twitter{
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a i:hover{
+    color: var(--light-green)
+}
