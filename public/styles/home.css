@@ -281,6 +281,14 @@ a {
     color: var(--white);
 }
 
-a i:hover{
-    color: var(--light-green)
+i.fa-instagram:hover {
+    color: var(--light-green);
+}
+
+i.fa-facebook-f:hover {
+    color: var(--light-green);
+}
+
+i.fa-twitter:hover {
+    color: var(--light-green);
 }
