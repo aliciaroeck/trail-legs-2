@@ -45,10 +45,10 @@
         <div class="trail_info">
             <div class="description">
                 <h2 class="title">Description:</h2>
-                <p class="text"><%=trail.description%> </p>
+                <p class="text"><%=trail.description%> <br> <br>
+                    Trail Rating: <%=trail.difficulty%></p>
                 <p class="creator">Created by <%=trail.user.username%></p>
             </div>
-            
             <% if(currentUser === trail.user._id.toString()) {%>
             <div class="icons">
                 <!-- delete icon -->
