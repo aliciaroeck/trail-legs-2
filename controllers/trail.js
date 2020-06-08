@@ -7,9 +7,6 @@ const db = require("../models");
 
 // new route
 router.get("/:cityid/new", (req,res) => {
-/*     if(!req.session.currentUser){
-        res.redirect("/login");
-    } */
     db.City.findById(req.params.cityid, (err, foundCity) => {
         const context = {city: foundCity}
         res.render("trails/new", context);
@@ -58,10 +55,10 @@ router.post("/:cityid", (req,res) => {
 // show route
 router.get("/:id", (req,res) => {
     db.Trail.findById(req.params.id).populate("city user").exec((err, foundTrail) => {
-        if(err){
+        if(err) {
             console.log(err);
             res.send({message: "Internal Server Error"});
-      } else {
+        } else {
         const context = {trail: foundTrail, currentUser:req.session.currentUser.id}
         res.render("trails/show", context);
       }     
