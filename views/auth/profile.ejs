@@ -19,7 +19,9 @@
                 <a href="/cities" class="nav_link"><i class="fas fa-globe-americas"></i> Cities</a>
             </nav>
         </section>
-
+        <form action="/logout?_method=DELETE" method="POST" class="logout">
+            <input type="submit" value="Logout">
+        </form>
     </header>
     <main>
         <h2>Hello, <%=user.username%></h2>

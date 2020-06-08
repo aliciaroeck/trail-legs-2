@@ -103,6 +103,24 @@ footer{
     transition: transform .2s linear;
 }
 
+.logout input{
+    font-family: var(--large-font);
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+    float: right;
+    margin-top: 170px;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+input:hover {
+    color: var(--light-green);
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: var(--green);

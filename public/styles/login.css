@@ -82,6 +82,13 @@ main {
     margin-bottom: 10px;
 }
 
+.error {
+    padding: 10px;
+    background-color: rgba(185, 74, 72, .9);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -89,7 +96,7 @@ main {
     align-items: center;
     text-align: center;
     background-color: var(--tan);
-    margin: 50px;
+    margin: 25px;
     padding: 50px;
     border-radius: 20px;
     Font-Family: 'Open Sans', Sans-Serif;
