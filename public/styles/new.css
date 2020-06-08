@@ -119,7 +119,8 @@ footer {
     color: var(--white);
     font-size: 14px;
     transition: .3s;
-    font-family: var(--small-font)
+    font-family: var(--small-font);
+    outline: none;
 }
 
 .main_content {
@@ -169,6 +170,7 @@ button {
     color: var(--tan);
     transition: .3s;
     padding: 10px;
+    outline: none;
 }
 
 button:hover {

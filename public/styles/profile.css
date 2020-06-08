@@ -114,6 +114,7 @@ footer{
     margin-top: 170px;
     margin-right: 10px;
     transition: .3s;
+    outline: none;
 }
 
 input:hover {

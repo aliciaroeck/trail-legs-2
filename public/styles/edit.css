@@ -173,7 +173,8 @@ button:hover {
     color: var(--white);
     font-size: 14px;
     transition: .3s;
-    font-family: var(--small-font)
+    font-family: var(--small-font);
+    outline: none;
 }
 
 .fa-times {
