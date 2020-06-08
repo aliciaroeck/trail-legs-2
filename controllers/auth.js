@@ -25,7 +25,6 @@ router.post("/register", async (req,res) => {
         req.body.password = hash;
         const newUser = await db.User.create(req.body);
         res.redirect("/login");
-        console.log(newUser);
     } catch (err) {
         console.log(err);
         res.send({err});
@@ -49,7 +48,6 @@ router.post("/register/new", async (req,res) => {
         req.body.password = hash;
         const newUser = await db.User.create(req.body);
         res.redirect("/login");
-        console.log(newUser);
     } catch (err) {
         console.log(err);
         res.send({err});
