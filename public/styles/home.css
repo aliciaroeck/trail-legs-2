@@ -157,6 +157,7 @@ footer{
     border: none;
     color: var(--white);
     font-size: 15px;
+    transition: .3s;
 }
 
 .register {

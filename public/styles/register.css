@@ -63,6 +63,13 @@ button:hover {
     overflow: hidden;
 }
 
+.error {
+    padding: 10px;
+    background-color: rgba(185, 74, 72, .9);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
 .auth-sidebar {
     background-image: url(/reglogin/register.jpg);
     background-size: 720px 800px;
@@ -91,7 +98,7 @@ button:hover {
     align-items: center;
     text-align: center;
     background-color: var(--tan);
-    margin: 50px;
+    margin: 25px;
     padding: 50px;
     border-radius: 20px;
     Font-Family: 'Open Sans', Sans-Serif;

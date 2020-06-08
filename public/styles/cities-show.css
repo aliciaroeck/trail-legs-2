@@ -204,7 +204,8 @@ button{
     border: none;
     background-color: var(--tan);
     font-size: 20px;
-    color: var(--green)
+    color: var(--green);
+    transition: .3s;
 }
 
 button:hover{
