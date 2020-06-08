@@ -5,34 +5,34 @@ We are building a user-friendly hiking trail application where you will be able 
 
 ## Wireframes
 **Home Page**
-![home wireframe](./planning/wireframes/home.png)
+![home wireframe](./images/planning/wireframes/home.png)
 
 **Register Page**
-![register wireframe](./planning/wireframes/register.png)
+![register wireframe](./images/planning/wireframes/register.png)
 
 **Login Page**
-![login wireframe](./planning/wireframes/login.png)
+![login wireframe](./images/planning/wireframes/login.png)
 
 **Profile Page**
-![profile wireframe](./planning/wireframes/profile.png)
+![profile wireframe](./images/planning/wireframes/profile.png)
 
 **All Cities Page**
-![all cities wireframe](./planning/wireframes/cities-index.png)
+![all cities wireframe](./images/planning/wireframes/cities-index.png)
 
 **City Page**
-![city wireframe](./planning/wireframes/cities-show.png)
+![city wireframe](./images/planning/wireframes/cities-show.png)
 
 **Trail Page**
-![trail wireframe](./planning/wireframes/trails-show.png)
+![trail wireframe](./images/planning/wireframes/trails-show.png)
 
 **Create Trail Page**
-![create trail wireframe](./planning/wireframes/new.png)
+![create trail wireframe](./images/planning/wireframes/new.png)
 
 **Edit Trail Page**
-![edit trail wireframe](./planning/wireframes/edit.png)
+![edit trail wireframe](./images/planning/wireframes/edit.png)
 
 ## ERD
-![erd](./planning/erd.png)
+![erd](./images/planning/erd.png)
 
 ## Color Scheme
 -  white: #f1f1f1
@@ -43,10 +43,10 @@ We are building a user-friendly hiking trail application where you will be able 
 
 ## Font
 **Raleway**
-![raleway](./planning/fonts/raleway.png)
+![raleway](./images/planning/fonts/raleway.png)
 
 **Open Sans**
-![opensans](./planning/fonts/open-sans.png)
+![opensans](./images/planning/fonts/open-sans.png)
 
 **Font Awesome**
 This application used [Font Awesome](https://fontawesome.com/) for icons.
