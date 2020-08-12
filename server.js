@@ -14,7 +14,7 @@ const controllers = require("./controllers");
 const app = express();
 
 /* Configuration Variables */
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 /* App Configuration */
 app.set("view engine", "ejs");
@@ -26,7 +26,7 @@ app.use(
   session({
     // store session info into db
     store: new MongoStore({
-      url: process.env.MONGODB_URI
+      url: process.env.MONGODB_URI || 'mongodb://localhost:27017/trail-legs'
     }),
     secret: process.env.SECRET_KEY,
     resave: false,
