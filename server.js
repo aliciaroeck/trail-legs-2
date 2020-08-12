@@ -14,7 +14,7 @@ const controllers = require("./controllers");
 const app = express();
 
 /* Configuration Variables */
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 /* App Configuration */
 app.set("view engine", "ejs");
@@ -28,7 +28,7 @@ app.use(
     store: new MongoStore({
       url: process.env.MONGODB_URI || 'mongodb://localhost:27017/trail-legs'
     }),
-    secret: process.env.SECRET_KEY,
+    secret: "Gucci",
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -74,6 +74,6 @@ app.use("/cities", controllers.city);
 app.use("/trails", authRequired, controllers.trail);
 
 /* Binding Server */
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
     console.log(`Server running on port ${PORT}`);
 });
